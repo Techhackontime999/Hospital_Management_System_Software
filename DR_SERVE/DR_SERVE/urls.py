@@ -28,4 +28,9 @@ urlpatterns = [
      path("MediJeevan/", include("MediJeevan.urls")),
 
 
+    #  always put below in last
+     path("__reload__/", include("django_browser_reload.urls")),
+
+
+
 ]
