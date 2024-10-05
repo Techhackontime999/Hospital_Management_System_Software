@@ -73,18 +73,49 @@
               <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                 aria-current="page">Dashboard</a>
               <a href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+              <div class="mt-[6px] relative inline-block text-left">
+                <div class="">
+                  <a href="#"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    id="menu-button" aria-expanded="true" aria-haspopup="true" onclick="toggleDropdown(event)">
+                    Services
+                  </a>
+                </div>
+
+                <div id="dropdown" class="absolute z-10 hidden bg-gray-800 rounded-md w-[300px] shadow-lg mt-3">
+                  <div class="py-1 ml-1" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Service
+                      1</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Service
+                      2</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Service
+                      3</a>
+                  </div>
+                </div>
+              </div>
+
+
               <a href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Pricing</a>
               <a href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">What's
+                new</a>
+
+              <!-- adding language -->
+
+              <!-- language close -->
             </div>
           </div>
         </div>
+
+
+
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
           ....
 
-          <!-- Profile dropdown -->
+          <!-- button dropdown -->
           <div class="relative ml-3">
             <div>
               <button type="button"
@@ -114,12 +145,24 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
           aria-current="page">Dashboard</a>
+
+
+
         <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
         <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
         <a href="#"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Pricing</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">What's
+          new</a>
+
+
+          
+
+           
+
       </div>
     </div>
   </nav>
@@ -140,7 +183,7 @@
       </div>
       <input type="search" id="default-search"
         class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search Mockups, Logos..." required />
+        placeholder="Search Services, Go to web..." required />
       <button type="submit"
         class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
     </div>
@@ -188,10 +231,671 @@
   </div>
 
   <!-- close hero -->
+  <!-- horizontal animation start -->
+  <div x-data="{}" x-init="$nextTick(() => {
+       let ul = $refs.logos;
+       ul.insertAdjacentHTML('afterend', ul.outerHTML);
+       ul.nextSibling.setAttribute('aria-hidden', 'true');
+   })"
+    class="w-full  mx-auto inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+    <ul x-ref="logos"
+      class="flex items-center justify-center md:justify-start px-[38px] [&_li]:mx-3 [&_img]:max-w-none animate-infinite-scroll">
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+    </ul>
+    <ul
+      class="flex items-center justify-center md:justify-start  px-[38px] [&_li]:mx-3 [&_img]:max-w-none animate-infinite-scroll"
+      aria-hidden="true">
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+      <li>
+        <div class="flex flex-col m-auto p-auto">
+
+          <div class=" flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+              <div class="inline-block px-3">
+                <!-- 1 card -->
+
+
+                <div
+                  class="max-w-[100%]  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                    <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/try.png' %}" alt="" />
+                  </a>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology
+                        acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                      technology
+                      acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      Read more
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 1 card close -->
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+  <!--horizontal animation close  -->
   <!-- permotion start -->
-  <div class="sm:mt-10 py-24 sm:py-32">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-center text-base/7 mt-7 font-semibold text-indigo-600">Deploy faster</h2>
+  <div class="sm:mt-1 py-18 sm:py-32">
+    <div class="mx-auto mt-0 max-w-[100%] px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-center text-base/7 mt-3 font-semibold text-indigo-600">Deploy faster</h2>
       <p
         class="mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
         Everything you need to deploy your app.</p>
@@ -285,7 +989,7 @@
   <!-- permotion close -->
   <!-- scrolling card start -->
   <!-- component -->
-  <div class="flex flex-col m-auto p-auto">
+  <div class="flex flex-col mb-6 m-auto p-auto">
     <h1 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-bold text-4xl text-gray-800">
 
     </h1>
@@ -295,7 +999,8 @@
           <!-- 1 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -324,7 +1029,8 @@
           <!-- 2 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -353,7 +1059,8 @@
           <!-- 3 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -382,7 +1089,8 @@
           <!-- 4 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -411,7 +1119,8 @@
           <!-- 5 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -440,7 +1149,8 @@
           <!-- 6 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -469,7 +1179,8 @@
           <!-- 7 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -498,7 +1209,8 @@
           <!-- 8 card -->
 
 
-          <div class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            class="max-w-[100%] w-[380px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <img class="rounded-t-lg" src="{% static 'DR_SERVE/images/hospital-management-system-tw.png' %}" alt="" />
             </a>
@@ -976,6 +1688,25 @@
     </div>
   </footer>
   <!-- footer close -->
+
+
+  <script>
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdown = document.getElementById('dropdown');
+      dropdown.classList.toggle('hidden');
+    }
+
+    // Close dropdown if clicked outside
+    window.onclick = function (event) {
+      const dropdown = document.getElementById('dropdown');
+      if (!event.target.matches('#menu-button')) {
+        if (!dropdown.classList.contains('hidden')) {
+          dropdown.classList.add('hidden');
+        }
+      }
+    }
+  </script>
 
 
   <script>

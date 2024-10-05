@@ -42,7 +42,17 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            animation: {
+                'infinite-scroll': 'infinite-scroll 25s linear infinite',
+              },
+              keyframes: {
+                'infinite-scroll': {
+                  from: { transform: 'translateX(0)' },
+                  to: { transform: 'translateX(-100%)' },
+                }
+              }
+        },
     },
     plugins: [
         /**
@@ -55,3 +65,6 @@ module.exports = {
         require('@tailwindcss/aspect-ratio'),
     ],
 }
+
+
+
