@@ -35,6 +35,10 @@ urlpatterns = [
     # include app here
      path("HospitalApp/", include("HospitalApp.urls")),
      path("MediJeevan/", include("MediJeevan.urls")),
+     path("DR_BLOG/", include("DR_BLOG.urls")),
+     path("DR_Feature/", include("DR_Feature.urls")),
+     path("DRAppoint/", include("DRAppoint.urls")),
+
 
 
     #  always put below in last

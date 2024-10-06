@@ -43,6 +43,9 @@ INSTALLED_APPS = [
      'theme',
     'HospitalApp',
     'MediJeevan',
+    'DRAppoint',
+    'DR_Feature',
+    'DR_BLOG',
 
 ]
 TAILWIND_APP_NAME = 'theme'

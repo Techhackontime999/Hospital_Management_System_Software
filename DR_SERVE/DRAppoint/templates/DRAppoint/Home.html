@@ -1,0 +1,548 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    {% tailwind_css %}
+</head>
+
+<body>
+    {% load static %}
+
+    <!-- new navbar start -->
+    <nav class="bg-[#020617]">
+        <div class="mx-auto max-w-screen-2xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto"
+                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                            alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                                aria-current="page">Dashboard</a>
+
+                            <!-- 1 -->
+                            <div class="relative">
+                                <a href="#" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
+                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">About</a>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownDivider1"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDividerButton1">
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Me</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="relative">
+                                <a href="#" id="dropdownDividerButton2" data-dropdown-toggle="dropdownDivider2"
+                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Services</a>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownDivider2"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDividerButton2">
+
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">HospitalApp</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
+                                        </li>
+                                    </ul>
+                                    <div class="py-2">
+                                        <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
+                                        </a>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">HospitalApp.com
+                                        </a> <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DRAppoint.com
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="relative">
+                                <a href="#" id="dropdownDividerButton3" data-dropdown-toggle="dropdownDivider3"
+                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">some1
+                                </a>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownDivider3"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDividerButton3">
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                        </li>
+                                    </ul>
+                                    <div class="py-2">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                            link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="relative">
+                                <a href="#"
+                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Pricing
+                                </a>
+                            </div>
+
+                            <div class="relative">
+                                <a href="#"
+                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">What's
+                                    new
+                                </a>
+                            </div>
+
+                            <!-- adding language -->
+
+
+                            <!-- language close -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                    ....
+
+                    <!-- button dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <a href="{% url 'Register' %}">
+                                <button type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register
+                                    now</button></a>
+                        </div>
+
+                        <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    aria-current="page">Dashboard</a>
+
+
+                <!-- 4 -->
+                <div class="relative">
+                    <a href="#" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
+                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownDivider4"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDividerButton4">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                aria-labelledby="dropdownDividerButton1">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Me</a>
+
+                            </ul>
+
+                    </div>
+                </div>
+
+
+                <!-- 5 -->
+                <div class="relative">
+                    <a href="#" id="dropdownDividerButton5" data-dropdown-toggle="dropdownDivider5"
+                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownDivider5"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDividerButton5">
+
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">HospitalApp</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
+                            </li>
+                        </ul>
+                        <div class="py-2">
+                            <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">HospitalApp.com
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DRAppoint.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 6 -->
+                <div class="relative">
+                    <a href="#" id="dropdownDividerButton6" data-dropdown-toggle="dropdownDivider6"
+                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">some1</a>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownDivider6"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDividerButton6">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                            </li>
+                        </ul>
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
+                                link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="relative">
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Pricing</a>
+                </div>
+
+                <div class="relative">
+                    <a href="#"
+                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">What's
+                        new</a>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar new close -->
+
+
+
+  <script>
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdown = document.getElementById('dropdown');
+      dropdown.classList.toggle('hidden');
+    }
+
+    // Close dropdown if clicked outside
+    window.onclick = function (event) {
+      const dropdown = document.getElementById('dropdown');
+      if (!event.target.matches('#menu-button')) {
+        if (!dropdown.classList.contains('hidden')) {
+          dropdown.classList.add('hidden');
+        }
+      }
+    }
+  </script>
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+      e.name = e.name === 'menu' ? 'close' : 'menu'
+      navLinks.classList.toggle('top-[7%]')
+    }
+  </script>
+  
+
+
+
+
+  <script>
+    // this is navbar dropdown 1
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton1').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider1');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider1');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton1) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+
+    // this is navbar dropdown 2
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton2').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider2');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider2');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton2) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+
+
+    // this is navbar dropdown 3
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton3').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider3');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider3');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton3) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+    // this is navbar dropdown 4
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton4').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider4');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider4');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton4) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+    // this is navbar dropdown 5
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton5').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider5');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider5');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton5) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+    // this is navbar dropdown 6
+    // JavaScript for dropdown functionality
+    document.getElementById('dropdownDividerButton6').addEventListener('click', function () {
+      const dropdown = document.getElementById('dropdownDivider6');
+      dropdown.classList.toggle('hidden');
+    });
+
+    // Optional: Close dropdown when clicking outside of it
+    window.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdownDivider6');
+      if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton6) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+
+
+
+
+  </script>
+
+
+  <!-- javascript for closing navbar in small device -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu button
+      const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      // Ensure the mobile menu is hidden initially
+      mobileMenu.classList.add('hidden');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+
+      // Toggle mobile menu
+      mobileMenuButton.addEventListener('click', () => {
+        const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isOpen);
+        mobileMenu.classList.toggle('hidden', isOpen);
+      });
+
+      // User menu button
+      const userMenuButton = document.getElementById('user-menu-button');
+      const userMenu = document.querySelector('[role="menu"]');
+
+      // Ensure the user menu is hidden initially
+      userMenu.classList.add('hidden');
+      userMenuButton.setAttribute('aria-expanded', 'false');
+
+      // Toggle user menu
+      userMenuButton.addEventListener('click', () => {
+        const isOpen = userMenuButton.getAttribute('aria-expanded') === 'true';
+        userMenuButton.setAttribute('aria-expanded', !isOpen);
+        userMenu.classList.toggle('hidden', isOpen);
+      });
+
+      // Close the user menu when clicking outside
+      document.addEventListener('click', (event) => {
+        if (!userMenuButton.contains(event.target) && !userMenu.contains(event.target)) {
+          userMenu.classList.add('hidden');
+          userMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+  </script>
+
+  <!-- language js start -->
+
+  <!-- language js close -->
+
+</body>
+
+</html>
