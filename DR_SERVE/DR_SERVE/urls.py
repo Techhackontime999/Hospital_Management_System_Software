@@ -23,6 +23,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home,name='Home'),
+    path('Register/', views.Register,name='Register'),
+    path('SignIn/', views.SignIn,name='SignIn'),
+    path('ForgotPassword/', views.ForgotPassword,name='ForgotPassword'),
+
+
+
+    
 
 
     # include app here
