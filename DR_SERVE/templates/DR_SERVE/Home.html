@@ -13,9 +13,16 @@
     rel="stylesheet">
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   {% tailwind_css %}
-</head>
-{% load static %}
-<style>
+  <style>
+    /* Simple animation for the text */
+    @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
+ }
+ .fade-in {
+     animation: fadeIn 1s ease forwards;
+ }
+
   .hide-scroll-bar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -25,10 +32,24 @@
     display: none;
   }
 </style>
+</head>
+{% load static %}
+
 
 <body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
 
 
+
+    <!-- Loading Animation -->
+    <div id="loading" class="duration-2000 loading fixed inset-0 flex flex-col items-center justify-center bg-white dark:bg-gray-900 z-50">
+      <div class="loader border-t-4 border-b-4 border-gray-200 dark:border-gray-400 rounded-full w-16 h-16 animate-spin"></div>
+      <h1 class="mt-4 text-lg text-gray-800 dark:text-gray-200 fade-in">Welcome Patient-Doctor Management System</h1>
+      <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Better Data</span> Scalable AI.</h1>
+<p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+  </div>
+<!-- animation close -->
+  <!-- Main Content -->
+  <div id="content" class="hidden">
 
 
   <!-- new navbar start -->
@@ -1919,8 +1940,8 @@
     </div>
   </footer>
   <!-- footer close -->
-
-
+<!-- animation close here -->
+  </div>>
   <script>
     function toggleDropdown(event) {
       event.preventDefault();
@@ -2105,6 +2126,19 @@
   <!-- language js start -->
 
   <!-- language js close -->
+
+    <!-- animation page start -->
+    <script>
+      // Simulating a loading period
+      window.onload = function() {
+          setTimeout(() => {
+              document.getElementById('loading').style.display = 'none';
+              document.getElementById('content').classList.remove('hidden');
+          }, 3000); // Adjust time as needed
+      };
+  </script>
+  <!-- animation page close -->
+
 
 </body>
 
