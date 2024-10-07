@@ -19,505 +19,251 @@
     {% load static %}
 
     <!-- new navbar start -->
-    <nav class="bg-[#020617]">
-        <div class="mx-auto max-w-screen-2xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button-->
-                    <button type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
-                        <span class="sr-only">Open main menu</span>
-                        <!--
-              Icon when menu is closed.
-  
-              Menu open: "hidden", Menu closed: "block"
-            -->
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                        <!--
-              Icon when menu is open.
-  
-              Menu open: "block", Menu closed: "hidden"
-            -->
-                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg>
+ 
+
+
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+              <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                  <span class="sr-only">Open sidebar</span>
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                  </svg>
+               </button>
+              <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+              </a>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ms-3">
+                  <div>
+                    <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                      <span class="sr-only">Open user menu</span>
+                      <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
                     </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto"
-                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                            alt="Your Company">
+                  </div>
+                  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+                    <div class="px-4 py-3" role="none">
+                      <p class="text-sm text-gray-900 dark:text-white" role="none">
+                        Neil Sims
+                      </p>
+                      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                        neil.sims@flowbite.com
+                      </p>
                     </div>
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                aria-current="page">Dashboard</a>
-
-                            <!-- 1 -->
-                            <div class="relative">
-                                <a href="#" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
-                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">About</a>
-
-                            </div>
-
-                            <!-- 2 -->
-                            <div class="relative">
-                                <a href="#" id="dropdownDividerButton2" data-dropdown-toggle="dropdownDivider2"
-                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Features</a>
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDivider2"
-                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
-                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                        aria-labelledby="dropdownDividerButton2">
-
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
-                                        </li>
-                                    </ul>
-                                    <div class="py-2">
-                                        <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
-                                        </a>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
-                                        </a>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 3 -->
-                            <div class="relative">
-                                <a href="#" id="dropdownDividerButton3" data-dropdown-toggle="dropdownDivider3"
-                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Services
-                                </a>
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDivider3"
-                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
-                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                        aria-labelledby="dropdownDividerButton3">
-
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Patient
-                                                Appointment</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Centralize
-                                                Medicine store</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Patient-Doctor
-                                                Intraction Through Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Awareness
-                                                Through Video </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Education</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-
-
-
-
-
-
-                            <div class="relative">
-                                <a href="#"
-                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">What's
-                                    new
-                                </a>
-                            </div>
-                            <div class="relative">
-                                <a href="#"
-                                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Contact
-                                    Us
-                                </a>
-                            </div>
-
-                            <!-- adding language -->
-
-
-                            <!-- language close -->
-                        </div>
-                    </div>
+                    <ul class="py-1" role="none">
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
-
-
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-                    ....
-
-                    <!-- button dropdown -->
-                    <div class="relative ml-3">
-                        <div>
-                            <a href="{% url 'Register' %}">
-                                <button type="button"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">SignIn
-                                    now
-                                </button></a>
-                        </div>
-
-                        <!--
-              Dropdown menu, show/hide based on menu state.
-  
-              Entering: "transition ease-out duration-100"
-                From: "transform opacity-0 scale-95"
-                To: "transform opacity-100 scale-100"
-              Leaving: "transition ease-in duration-75"
-                From: "transform opacity-100 scale-100"
-                To: "transform opacity-0 scale-95"
-            -->
-
-                    </div>
-                </div>
-            </div>
+              </div>
+          </div>
         </div>
-
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pb-3 pt-2">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                    aria-current="page">Dashboard</a>
-
-
-                <!-- 4 -->
-                <div class="relative">
-                    <a href="#" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
-                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-
-                </div>
-
-
-                <!-- 5 -->
-                <div class="relative">
-                    <a href="#" id="dropdownDividerButton5" data-dropdown-toggle="dropdownDivider5"
-                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Features</a>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownDivider5"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDividerButton5">
-
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
-                            </li>
-
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
-                            </li>
-                        </ul>
-                        <div class="py-2">
-                            <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
-                            </a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
-                            </a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
-                            </a>
-
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 6 -->
-                <div class="relative">
-                    <a href="#" id="dropdownDividerButton6" data-dropdown-toggle="dropdownDivider6"
-                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownDivider6"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="dropdownDividerButton6">
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Patient
-                                    Appointment</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Centralize
-                                    Medicine store</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Patient-Doctor
-                                    Intraction Through Blog</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Awareness
-                                    Through Video </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Education</a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-                <div class="relative">
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">What's
-                        new</a>
-                </div>
-
-                <div class="relative">
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact
-                        Us
-                    </a>
-                </div>
-
-
-
+      </nav>
+      
+      <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+            <ul class="space-y-2 font-medium">
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                        <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
+                        <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
+                     </svg>
+                     <span class="ms-3">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                        <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+                     <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                     <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                        <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                        <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"/>
+                        <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"/>
+                        <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"/>
+                     </svg>
+                     <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </aside>
+      
+      <div class="p-4 sm:ml-64">
+         <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <div class="grid grid-cols-3 gap-4 mb-4">
+               <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
             </div>
-        </div>
-    </nav>
+            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+               <p class="text-2xl text-gray-400 dark:text-gray-500">
+                  <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                  </svg>
+               </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+            </div>
+            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+               <p class="text-2xl text-gray-400 dark:text-gray-500">
+                  <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                  </svg>
+               </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+               <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                  <p class="text-2xl text-gray-400 dark:text-gray-500">
+                     <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                     </svg>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+
 
     <!-- navbar new close -->
 
 
 
     <script>
-        function toggleDropdown(event) {
-            event.preventDefault();
-            const dropdown = document.getElementById('dropdown');
-            dropdown.classList.toggle('hidden');
-        }
+       // Select the toggle button and the sidebar
+const drawerToggle = document.querySelector('[data-drawer-toggle="logo-sidebar"]');
+const sidebar = document.getElementById('logo-sidebar');
 
-        // Close dropdown if clicked outside
-        window.onclick = function (event) {
-            const dropdown = document.getElementById('dropdown');
-            if (!event.target.matches('#menu-button')) {
-                if (!dropdown.classList.contains('hidden')) {
-                    dropdown.classList.add('hidden');
-                }
-            }
-        }
-    </script>
+// Function to toggle sidebar visibility
+function toggleSidebar() {
+  // Toggle the sidebar class
+  sidebar.classList.toggle('-translate-x-full');
+}
 
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e) {
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[7%]')
-        }
-    </script>
-
-
-
-
-
-    <script>
-        // this is navbar dropdown 1
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton1').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider1');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider1');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton1) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-
-        // this is navbar dropdown 2
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton2').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider2');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider2');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton2) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-
-
-        // this is navbar dropdown 3
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton3').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider3');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider3');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton3) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-        // this is navbar dropdown 4
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton4').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider4');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider4');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton4) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-        // this is navbar dropdown 5
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton5').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider5');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider5');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton5) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-        // this is navbar dropdown 6
-        // JavaScript for dropdown functionality
-        document.getElementById('dropdownDividerButton6').addEventListener('click', function () {
-            const dropdown = document.getElementById('dropdownDivider6');
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Optional: Close dropdown when clicking outside of it
-        window.addEventListener('click', function (event) {
-            const dropdown = document.getElementById('dropdownDivider6');
-            if (!dropdown.contains(event.target) && event.target !== dropdownDividerButton6) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-
-
-
-
-    </script>
-
-
-    <!-- javascript for closing navbar in small device -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu button
-            const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            // Ensure the mobile menu is hidden initially
-            mobileMenu.classList.add('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-
-            // Toggle mobile menu
-            mobileMenuButton.addEventListener('click', () => {
-                const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isOpen);
-                mobileMenu.classList.toggle('hidden', isOpen);
-            });
-
-            // User menu button
-            const userMenuButton = document.getElementById('user-menu-button');
-            const userMenu = document.querySelector('[role="menu"]');
-
-            // Ensure the user menu is hidden initially
-            userMenu.classList.add('hidden');
-            userMenuButton.setAttribute('aria-expanded', 'false');
-
-            // Toggle user menu
-            userMenuButton.addEventListener('click', () => {
-                const isOpen = userMenuButton.getAttribute('aria-expanded') === 'true';
-                userMenuButton.setAttribute('aria-expanded', !isOpen);
-                userMenu.classList.toggle('hidden', isOpen);
-            });
-
-            // Close the user menu when clicking outside
-            document.addEventListener('click', (event) => {
-                if (!userMenuButton.contains(event.target) && !userMenu.contains(event.target)) {
-                    userMenu.classList.add('hidden');
-                    userMenuButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
+// Add event listener to the toggle button
+drawerToggle.addEventListener('click', toggleSidebar);
 
     </script>
 
