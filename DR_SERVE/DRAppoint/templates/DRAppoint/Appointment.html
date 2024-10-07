@@ -318,7 +318,10 @@
                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
                             data-tabs-toggle="#default-tab-content" role="tablist">
                             <li class="me-2" role="presentation">
-                                <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                                    aria-controls="dashboard" aria-selected="false">Dashboard</button>
                             </li>
                         </ul>
                     </div>
@@ -338,12 +341,15 @@
                 <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                     <div class="mb-4 bg-red-700 border-b border-gray-200 dark:border-gray-700">
                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
-                        data-tabs-toggle="#default-tab-content" role="tablist">
-                        <li class="me-2" role="presentation">
-                            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
-                        </li>
-                    </ul>
-                        </div>
+                            data-tabs-toggle="#default-tab-content" role="tablist">
+                            <li class="me-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                    aria-controls="settings" aria-selected="false">Settings</button>
+                            </li>
+                        </ul>
+                    </div>
 
                     <p class="text-2xl text-gray-400 dark:text-gray-500">
                         <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -358,11 +364,14 @@
                 <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                     <div class="mb-4 bg-red-700 border-b border-gray-200 dark:border-gray-700">
                         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
-                        data-tabs-toggle="#default-tab-content" role="tablist">
-                        <li role="presentation">
-                            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
-                        </li>
-                    </ul>
+                            data-tabs-toggle="#default-tab-content" role="tablist">
+                            <li role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
+                                    aria-controls="contacts" aria-selected="false">Contacts</button>
+                            </li>
+                        </ul>
                     </div>
                     <p class="text-2xl text-gray-400 dark:text-gray-500">
                         <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -373,20 +382,109 @@
                     </p>
                 </div>
             </div>
-            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+            <div class="mx-auto flex items-center justify-center h-[100%] mb-4 rounded bg-gray-50 dark:bg-gray-800">
                 <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
+
 
                     <!--book data tab start -->
-                <div id="default-tab-content">
-                  
+                <div id="default-tab-content ">
+
                     <!-- tab 1 -->
+
                     <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="dashboard" role="tabpanel"
                         aria-labelledby="dashboard-tab">
+                        <h2 class="text-4xl font-extrabold dark:text-white">Adding your details</h2>
+                        <form class="mt-4">
+                            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                <div>
+                                    <label for="first_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
+                                        name</label>
+                                    <input type="text" id="first_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="John" required />
+                                </div>
+                                <div>
+                                    <label for="last_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
+                                        name</label>
+                                    <input type="text" id="last_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Doe" required />
+                                </div>
+                                <div>
+                                    <label for="company"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+                                    <input type="text" id="company"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Flowbite" required />
+                                </div>
+                                <div>
+                                    <label for="phone"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
+                                        number</label>
+                                    <input type="tel" id="phone"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                                </div>
+                                <div>
+                                    <label for="website"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website
+                                        URL</label>
+                                    <input type="url" id="website"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="flowbite.com" required />
+                                </div>
+                                <div>
+                                    <label for="visitors"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unique
+                                        visitors (per month)</label>
+                                    <input type="number" id="visitors"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="" required />
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
+                                    address</label>
+                                <input type="email" id="email"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="john.doe@company.com" required />
+                            </div>
+                            <div class="mb-6">
+                                <label for="password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                <input type="password" id="password"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="•••••••••" required />
+                            </div>
+                            <div class="mb-6">
+                                <label for="confirm_password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
+                                    password</label>
+                                <input type="password" id="confirm_password"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="•••••••••" required />
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" type="checkbox" value=""
+                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                                        required />
+                                </div>
+                                <label for="remember"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the
+                                    <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and
+                                        conditions</a>.</label>
+                            </div>
+                            <button type="submit"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        </form>
+
+
+
+
                         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
                                 class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
                                 content</strong>. Clicking another tab will toggle the visibility of this one for the
@@ -395,18 +493,180 @@
                     <!-- tab 2 -->
                     <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings" role="tabpanel"
                         aria-labelledby="settings-tab">
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Settings tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                    <!-- tab 3 -->
-                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"
-                        aria-labelledby="contacts-tab">
+
+
+                        <!-- search start -->
+
+                        <!-- search start -->
+                        <h2 class="text-4xl font-extrabold dark:text-white">Choose your hospital</h2>
+
+                        <form class="my-8 max-w-full mx-auto">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-4">
+                                <!-- First Select -->
+                                <div>
+                                    <label for="country1"
+                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
+                                        select</label>
+                                    <select id="country1"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Choose a country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                    </select>
+                                </div>
+
+                                <!-- Second Select -->
+                                <div>
+                                    <label for="country2"
+                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
+                                        select</label>
+                                    <select id="country2"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Choose a country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                    </select>
+                                </div>
+
+                                <!-- Third Select -->
+                                <div>
+                                    <label for="country3"
+                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
+                                        select</label>
+                                    <select id="country3"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Choose a country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="FR">France</option>
+                                        <option value="DE">Germany</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        </form>
+                        <!-- search bar close -->
+
                         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
                                 class="font-medium text-gray-800 dark:text-white">Contacts tab's associated
                                 content</strong>. Clicking another tab will toggle the visibility of this one for the
                             next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+
+                    </div>
+                    <!-- tab 3 -->
+                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"
+                        aria-labelledby="contacts-tab">
+                        <h2 class="text-4xl font-extrabold dark:text-white">Check and done</h2>
+                        <form class="mt-4">
+                            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                <div>
+                                    <label for="first_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
+                                        name</label>
+                                    <input type="text" id="first_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="John" required />
+                                </div>
+                                <div>
+                                    <label for="last_name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
+                                        name</label>
+                                    <input type="text" id="last_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Doe" required />
+                                </div>
+                                <div>
+                                    <label for="company"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+                                    <input type="text" id="company"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Flowbite" required />
+                                </div>
+                                <div>
+                                    <label for="phone"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
+                                        number</label>
+                                    <input type="tel" id="phone"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                                </div>
+                                <div>
+                                    <label for="website"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website
+                                        URL</label>
+                                    <input type="url" id="website"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="flowbite.com" required />
+                                </div>
+                                <div>
+                                    <label for="visitors"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unique
+                                        visitors (per month)</label>
+                                    <input type="number" id="visitors"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="" required />
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
+                                    address</label>
+                                <input type="email" id="email"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="john.doe@company.com" required />
+                            </div>
+                            <div class="mb-6">
+                                <label for="password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                <input type="password" id="password"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="•••••••••" required />
+                            </div>
+                            <div class="mb-6">
+                                <label for="confirm_password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
+                                    password</label>
+                                <input type="password" id="confirm_password"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="•••••••••" required />
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" type="checkbox" value=""
+                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                                        required />
+                                </div>
+                                <label for="remember"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the
+                                    <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and
+                                        conditions</a>.</label>
+                            </div>
+                            <button type="submit"
+                                class="text-white bg-red-600 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Final Submit</button>
+
+
+
+
+                                
+                        </form>
+
+
+
+
+
+
+
+
+                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
+                                class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
+                                content</strong>. Clicking another tab will toggle the visibility of this one for the
+                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    </div>
                     </div>
                 </div>
 
@@ -586,45 +846,45 @@
     <!-- speed dial javascript close -->
 
     <!-- tab switching js start -->
-     <script>
-    // Select all tab buttons
-    const tabButtons = document.querySelectorAll('[role="tab"]');
-    // Select all tab content elements
-    const tabContents = document.querySelectorAll('[role="tabpanel"]');
-    
-    // Function to handle tab change
-    const handleTabChange = (event) => {
-        // Hide all tab contents
-        tabContents.forEach(content => {
-            content.classList.add('hidden');
-            content.setAttribute('aria-selected', 'false');
-        });
-    
-        // Remove active class from all tabs
+    <script>
+        // Select all tab buttons
+        const tabButtons = document.querySelectorAll('[role="tab"]');
+        // Select all tab content elements
+        const tabContents = document.querySelectorAll('[role="tabpanel"]');
+
+        // Function to handle tab change
+        const handleTabChange = (event) => {
+            // Hide all tab contents
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+                content.setAttribute('aria-selected', 'false');
+            });
+
+            // Remove active class from all tabs
+            tabButtons.forEach(button => {
+                button.classList.remove('border-blue-500', 'text-blue-600');
+                button.setAttribute('aria-selected', 'false');
+            });
+
+            // Show the clicked tab's content
+            const targetContent = document.querySelector(event.currentTarget.getAttribute('data-tabs-target'));
+            targetContent.classList.remove('hidden');
+            targetContent.setAttribute('aria-selected', 'true');
+
+            // Add active class to the clicked tab
+            event.currentTarget.classList.add('border-blue-500', 'text-blue-600');
+        };
+
+        // Attach click event listeners to each tab button
         tabButtons.forEach(button => {
-            button.classList.remove('border-blue-500', 'text-blue-600');
-            button.setAttribute('aria-selected', 'false');
+            button.addEventListener('click', handleTabChange);
         });
-    
-        // Show the clicked tab's content
-        const targetContent = document.querySelector(event.currentTarget.getAttribute('data-tabs-target'));
-        targetContent.classList.remove('hidden');
-        targetContent.setAttribute('aria-selected', 'true');
-    
-        // Add active class to the clicked tab
-        event.currentTarget.classList.add('border-blue-500', 'text-blue-600');
-    };
-    
-    // Attach click event listeners to each tab button
-    tabButtons.forEach(button => {
-        button.addEventListener('click', handleTabChange);
-    });
-    
-    // Optionally: Activate the first tab on page load
-    if (tabButtons.length > 0) {
-        tabButtons[0].click();
-    }
-</script>
+
+        // Optionally: Activate the first tab on page load
+        if (tabButtons.length > 0) {
+            tabButtons[0].click();
+        }
+    </script>
     <!-- tab switching js close -->
 
     <!-- language js start -->

@@ -32,6 +32,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'HospitalApp.apps.HospitalappConfig',
+    'MediJeevan.apps.MedijeevanConfig',
+    'DR_BLOG.apps.DrBlogConfig',
+    'DR_Feature.apps.DrFeatureConfig',
+    'DRAppoint.apps.DrappointConfig',
+     'theme.apps.ThemeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,12 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'django_browser_reload',
-     'theme',
-    'HospitalApp',
-    'MediJeevan',
-    'DRAppoint',
-    'DR_Feature',
-    'DR_BLOG',
+    
 
 ]
 TAILWIND_APP_NAME = 'theme'
