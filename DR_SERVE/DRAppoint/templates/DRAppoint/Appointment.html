@@ -22,7 +22,7 @@
 
 
 
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <nav class="fixed top-0 z-50 w-full bg-black border-b border-gray-600 dark:bg-black dark:border-gray-600">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start rtl:justify-end">
@@ -100,13 +100,38 @@
     </nav>
 
     <aside id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-gray-600 sm:translate-x-0 dark:bg-black "
         aria-label="Sidebar">
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-black">
             <ul class="space-y-2 font-medium">
                 <li>
-                    <a href="#"
+                    <a href="#" id="patient-signin-tab" data-tabs-target="#patient-signin_content" role="tab1"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 18">
+                            <path
+                                d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                        </svg>
+                        <span class="ms-3">User Login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 18 18">
+                            <path
+                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                        </svg>
+                        <span class="ms-3">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="Appointment-tab" data-tabs-target="#Appointment_content" role="tab3"
+                        class="flex items-center  p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 22 21">
@@ -115,62 +140,93 @@
                             <path
                                 d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                         </svg>
-                        <span class="ms-3">Dashboard</span>
+                        <span class="ms-3">Appointment</span>
                     </a>
                 </li>
+
                 <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 18 18">
-                            <path
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                        </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-                        <span
-                            class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <path
-                                d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
-                        </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
-                        <span
-                            class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="#" id="Payment-tab" data-tabs-target="#Payment_content" role="tab4"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 18">
                             <path
                                 d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                         </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Make Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Reciept-tab" data-tabs-target="#Reciept_content" role="tab5"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">Get Reciept</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Quieue-tab" data-tabs-target="#Quieue_content" role="tab6"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">See Quiue</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Pastreport-tab" data-tabs-target="#Pastreport_content" role="tab7"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">See Past Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Analysis-tab" data-tabs-target="#Analysis_content" role="tab8"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">Health Analysis</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="Contactus-tab" data-tabs-target="#Contactus_content" role="tab9"
+                        class="flex items-center p-2 text-gray-900   rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">Contact us</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 18 20">
-                            <path
-                                d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                        </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-                    </a>
-                </li>
 
                 <li>
                     <a href="#"
@@ -272,42 +328,48 @@
         <!-- speed dial close -->
     </aside>
     <!-- main start -->
-    <div class="p-4 sm:ml-64  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+    <!-- it's default patient-signin-content main start -->
+    <div class="p-4 sm:ml-64 " id="patient-signin_content">
+        <div class="p-4  rounded-lg  mt-14">
 
+            <!-- Login/Authentication Tab (Default content) -->
+            <div id="login_content" class="p-6 bg-gray-100 dark:bg-gray-800">
+                <h2 class="text-2xl font-bold mb-4">Login</h2>
+                <form id="login-form" class="space-y-4">
+                    <div>
+                        <label for="username"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Username</label>
+                        <input type="text" id="username"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            required>
+                    </div>
+                    <div>
+                        <label for="password"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                        <input type="password" id="password"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            required>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- patien-signin-content main close -->
+    <!-- dashboard main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Dashboard_content">
+        <div class="p-4  rounded-lg  mt-14">
+            i am dashboard
+        </div>
+    </div>
+    <!-- dashboard main close -->
+    <!-- Appointment main start -->
+    <div class="p-4 sm:ml-64 hidden bg-gray-900" id="Appointment_content">
         <div class="p-4  rounded-lg  mt-14">
             <!-- content start here -->
-
-
-            <ol
-                class="flex rounded-2xl h-[60px] mb-4 bg-slate-800 items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
-                <li
-                    class="flex md:w-full items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
-                    <span
-                        class="flex items-center after:content-['/'] sm:after:hidden after:mx-5 after:text-gray-200 dark:after:text-gray-500">
-                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 me-2.5" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                        </svg>
-                        1.Personal <span class="hidden sm:inline-flex sm:ms-2">Details</span>
-                    </span>
-                </li>
-                <li
-                    class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
-                    <span
-                        class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
-                        <span class="me-2">2.</span>
-                        Hospital <span class="hidden sm:inline-flex sm:ms-2">Details</span>
-                    </span>
-                </li>
-                <li class="flex items-center mr-5">
-                    <span class="me-2 ">3.</span>
-                    Confirmation
-                </li>
-            </ol>
-
-
-
 
 
             <div class="grid grid-cols-3 gap-4 mb-4 ">
@@ -321,7 +383,7 @@
                             <li class="me-2" role="presentation">
                                 <!-- Button -->
                                 <button type="button"
-                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-red-600 to-lime-200 hover:bg-gradient-to-l hover:from-red-400 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                                     id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
                                     aria-controls="dashboard" aria-selected="false">
                                     Add Personal Details +
@@ -346,7 +408,7 @@
                             data-tabs-toggle="#default-tab-content" role="tablist">
                             <li class="me-2" role="presentation">
                                 <button type="button"
-                                    class="h-[65px] inline-block text-gray-900  bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                                    class="h-[65px] inline-block text-gray-900  bg-gradient-to-r from-sky-500 to-lime-200 hover:bg-gradient-to-l hover:from-sky-300 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                                     id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
                                     aria-controls="settings" aria-selected="false">
                                     Add Hospital Details +
@@ -366,7 +428,7 @@
                             data-tabs-toggle="#default-tab-content" role="tablist">
                             <li class="me-2" role="presentation">
                                 <button type="button"
-                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-green-500 to-lime-200 hover:bg-gradient-to-l hover:from-green-300 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                                     id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
                                     aria-controls="contacts" aria-selected="false">
                                     Confirm and Final Submit +
@@ -378,7 +440,7 @@
                 </div>
             </div>
             <div
-                class=" mx-auto flex items-center justify-center h-[100%] mb-4 rounded-2xl  shadow dark:bg-gray-800">
+                class=" mx-auto my-14 flex items-center justify-center h-[100%] mb-4 rounded-2xl  shadow border-2 border-gray-500">
                 <p class="text-2xl text-gray-400 dark:text-gray-500">
 
 
@@ -387,7 +449,8 @@
 
                     <!-- tab 1 -->
 
-                    <div class="hidden p-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="hidden p-4 py-14 rounded-lg " id="dashboard" role="tabpanel"
+                        aria-labelledby="dashboard-tab">
                         <h2 class="text-4xl font-extrabold dark:text-white">Adding your details</h2>
                         <form class="mt-4">
                             <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -486,7 +549,7 @@
                             next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                     </div>
                     <!-- tab 2 -->
-                    <div class="hidden p-4 rounded-lg " id="settings" role="tabpanel"
+                    <div class="hidden p-4 py-14 rounded-lg " id="settings" role="tabpanel"
                         aria-labelledby="settings-tab">
 
 
@@ -554,7 +617,7 @@
 
                     </div>
                     <!-- tab 3 -->
-                    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel"
+                    <div class="hidden p-4 py-14 rounded-lg " id="contacts" role="tabpanel"
                         aria-labelledby="contacts-tab">
                         <h2 class="text-4xl font-extrabold dark:text-white">Check and done</h2>
                         <form class="mt-4 ">
@@ -671,91 +734,59 @@
             </p>
         </div>
         <!-- book data tab close -->
-        <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
-            </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 18 18">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 1v16M1 9h16" />
-                    </svg>
-                </p>
-            </div>
-        </div>
-        <div class=" mb-4 rounded ">
-
-         
-            <footer class="bg-white rounded-lg shadow dark:bg-gray-800 ">
-                <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
-                    <div class="sm:flex sm:items-center sm:justify-between">
-                        <a href="https://flowbite.com/"
-                            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                            <span
-                                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                        </a>
-
-
-
-                        <ul
-                            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">About</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                            href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights
-                        Reserved.</span>
-                </div>
-            </footer>
-
-
-        </div>
 
     </div>
     </div>
+
+    <!-- Appointment main close -->
+    <!-- payment main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Payment_content">
+        <div class="p-4  rounded-lg  mt-14">
+            i am payment
+        </div>
+    </div>
+    <!-- payment main close -->
+    <!-- Reciept main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Reciept_content">
+        <div class="p-4  rounded-lg  mt-14">
+            i am Reciept
+        </div>
+    </div>
+    <!-- Reciept main close -->
+    <!-- Quieue main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Quieue_content">
+        <div class="p-4  rounded-lg  mt-14">
+            i am Quieue
+        </div>
+    </div>
+    <!-- Quieue main close -->
+    <!-- contact us main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Contactus_content">
+        <div class="p-4  rounded-lg  mt-14">
+            i am contact us
+        </div>
+    </div>
+    <!-- contact us main close -->
+
+<!-- Analysis start here -->
+<div class="p-4 sm:ml-64 hidden" id="Analysis_content">
+    <div class="p-4  rounded-lg  mt-14">
+        i am analysis
+    </div>
+</div>
+<!-- Analysis close here -->
+<!-- Past report start -->
+<div class="p-4 sm:ml-64 hidden" id="Pastreport_content">
+    <div class="p-4  rounded-lg  mt-14">
+        i am pastreport 
+    </div>
+</div>
+<!-- past report close -->
+
     <!-- main close -->
 
 
-    <!-- navbar new close -->
+
 
 
 
@@ -876,6 +907,85 @@
     <!-- language js start -->
 
     <!-- language js close -->
+
+    <!-- script for aside navlink start-->
+   
+    <script>
+        // Simulate user authentication (for demo purposes, it always succeeds)
+        function authenticateUser(username, password) {
+            return username === "admin" && password === "password";
+        }
+
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if authentication is successful
+            if (authenticateUser(username, password)) {
+                alert('Login successful!');
+                
+
+
+                // Enable the other tabs (Dashboard & Settings)
+                let DashboardTab = document.getElementById('Dashboard-tab');
+                let AppointmentTab = document.getElementById('Appointment-tab');
+                let PaymentTab = document.getElementById('Payment-tab');
+                let RecieptTab = document.getElementById('Reciept-tab');
+                let ContactTab = document.getElementById('Contactus-tab');
+
+                let QuieueTab = document.getElementById('Quieue-tab');
+                let PastreportTab = document.getElementById('Pastreport-tab');
+                let AnalysisTab = document.getElementById('Analysis-tab');
+
+
+                // Ensure that pointer-events-none and opacity-50 are removed properly
+                ContactTab.classList.remove('pointer-events-none', 'opacity-50');
+
+                QuieueTab.classList.remove('pointer-events-none', 'opacity-50');
+
+                RecieptTab.classList.remove('pointer-events-none', 'opacity-50');
+                AppointmentTab.classList.remove('pointer-events-none', 'opacity-50');
+               
+                PaymentTab.classList.remove('pointer-events-none', 'opacity-50');
+
+                AppointmentTab.classList.remove('pointer-events-none', 'opacity-50');
+                PastreportTab.classList.remove('pointer-events-none', 'opacity-50');
+                AnalysisTab.classList.remove('pointer-events-none', 'opacity-50');
+
+                // Ensure that pointer-events-none and opacity-50 are removed properly
+
+
+
+
+                // Hide login form
+                document.getElementById('login_content').classList.add('hidden');
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+
+        // Handle tab navigation
+        document.querySelectorAll('[data-tabs-target]').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                if (!button.classList.contains('pointer-events-none')) {
+                    const targetTab = button.getAttribute('data-tabs-target');
+                    document.querySelectorAll('[id$="_content"]').forEach(tab => tab.classList.add('hidden'));
+                    document.querySelector(targetTab).classList.remove('hidden');
+                } else {
+                    alert('Please log in to access this tab.');
+                }
+            });
+        });
+    </script>
+   
+    
+
+
+    <!-- script for aside navlink close-->
 
 </body>
 

@@ -97,7 +97,7 @@
               <!-- 1 -->
               <div class="relative">
                 <a href="#" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">About</a>
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">About</a>
                 <!-- Dropdown menu -->
                 <div id="dropdownDivider1"
                   class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
@@ -115,7 +115,7 @@
               <!-- 2 -->
               <div class="relative">
                 <a href="#" id="dropdownDividerButton2" data-dropdown-toggle="dropdownDivider2"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Features</a>
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">Features</a>
                 <!-- Dropdown menu -->
                 <div id="dropdownDivider2"
                   class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute mt-1">
@@ -166,7 +166,7 @@
               <!-- 3 -->
               <div class="relative">
                 <a href="#" id="dropdownDividerButton3" data-dropdown-toggle="dropdownDivider3"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Services
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">Services
                 </a>
                 <!-- Dropdown menu -->
                 <div id="dropdownDivider3"
@@ -215,19 +215,19 @@
 
               <div class="relative">
                 <a href="#"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Pricing
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">Pricing
                 </a>
               </div>
 
               <div class="relative">
                 <a href="#"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">What's
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">What's
                   new
                 </a>
               </div>
               <div class="relative">
                 <a href="#"
-                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">Contact US
+                  class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">Contact US
                   
                 </a>
               </div>
@@ -249,10 +249,7 @@
           <!-- button dropdown -->
           <div class="relative ml-3">
             <div>
-              <a href="{% url 'Register' %}">
-                <button type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register
-                  now</button></a>
+            
             </div>
 
             <!--
@@ -466,9 +463,10 @@
           <p class="mt-6 text-lg leading-8 text-gray-300">Ac euismod vel sit maecenas id pellentesque eu sed
             consectetur. Malesuada adipiscing sagittis vel nulla.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            <a href="#"
-              class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
-              started</a>
+            <a href="{% url 'Register' %}">
+              <button type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Register
+                now</button></a>
             <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span
                 aria-hidden="true">→</span></a>
           </div>
