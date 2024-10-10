@@ -23,3 +23,5 @@ def SignUp(request):
 def ForgotPassword(request):
     # return HttpResponse("hello hospital home")
     return render(request,'DRAppoint/Forgot_Password.html')    
+
+

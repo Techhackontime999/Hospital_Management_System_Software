@@ -17,7 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .import views
-
 urlpatterns = [
     path('', views.Home,name='Home'),
     path('Appointment/', views.Appointment,name='Appointment'),
@@ -25,6 +24,7 @@ urlpatterns = [
     path('SignUp/', views.SignUp,name='SignUp'),
     path('About/', views.About,name='About'),
     path('ForgotPassword/', views.ForgotPassword,name='ForgotPassword'),
+
 
 
 
