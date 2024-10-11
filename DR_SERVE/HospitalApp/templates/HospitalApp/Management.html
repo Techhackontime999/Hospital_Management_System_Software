@@ -5,9 +5,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title>DR.SERVE</title>
   {% tailwind_css %}
+  <style>
+    html, body {
+  overflow-x: hidden;
+}
+
+  </style>
 </head>
 {% load static %}
 
@@ -231,7 +238,7 @@
     </div>
   </div>
   <aside
-    class="w-60 -translate-x-48 fixed transition transform ease-in-out duration-1000 z-50 flex h-screen bg-[#1E293B] ">
+    class=" w-60 -translate-x-48 fixed transition transform ease-in-out duration-1000 z-50 flex h-screen bg-[#1E293B] ">
     <!-- open sidebar button -->
     <div
       class="max-toolbar translate-x-24 scale-x-0 w-full -right-6 transition transform ease-in duration-300 flex items-center justify-between border-4 border-white dark:border-[#0F172A] bg-[#1E293B]  absolute top-2 rounded-full h-12">
@@ -278,7 +285,7 @@
     </div>
     <!-- MAX SIDEBAR-->
 
-    <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)]">
+    <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)] ">
       <!-- start -->
 
       <div
@@ -335,34 +342,6 @@
       </div>
 
       <!-- close -->
-        <!-- start -->
-
-      <div
-      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-      </svg>
-      <div>
-
-
-        <ul class="space-y-2 font-medium">
-          <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
-
-              <span class="ms-3">Graph Analysis</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-    <!-- close -->
       <!-- start -->
 
       <div
@@ -380,7 +359,7 @@
               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
                 class="flex items-center">
 
-                <span class="ms-3">Graph Analysis</span>
+                <span class="ms-3">Telemedicine Services</span>
               </a>
             </li>
           </ul>
@@ -391,34 +370,356 @@
       </div>
 
       <!-- close -->
-        <!-- start -->
+      <!-- start -->
 
       <div
-      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-      </svg>
-      <div>
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
 
 
-        <ul class="space-y-2 font-medium">
-          <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
 
-              <span class="ms-3">Graph Analysis</span>
-            </a>
-          </li>
-        </ul>
+                <span class="ms-3">Pharmacy Services</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
 
       </div>
 
+      <!-- close -->
+      <!-- start -->
 
-    </div>
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
 
-    <!-- close -->
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Diagnostic Services
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Palliative and Hospice Care
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Education Services
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Palliative and Hospice Care
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Nutrition and Dietary Services
+
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Rehabilitation and Physiotherapy Services</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Preventive and Wellness Services </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Day Care Services
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Home Care Services
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Specialized Clinics and Centers
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Nutrition and Dietary Services</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
 
     </div>
     <!-- MINI SIDEBAR-->
@@ -478,7 +779,8 @@
 
   <!-- CONTENT -->
   <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
-    <nav class="flex px-5 py-3 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
+    
+    <nav class="flex px-5 py-4 my-2 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
           <a href="#"
@@ -504,20 +806,28 @@
           </div>
         </li>
       </ol>
-    </nav>
-    <!-- dashboard main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Dashboard_content">
-      <div class="p-4  rounded-lg  mt-14">
-        i am dashboard {current analysis}
-        its showing current occuring entities like patient joins today,staff joins today ,doctor joins today,doctor
-        works today,
-        doctor not present today,total patient no successful his disease,hospital rating of hospital given by patients
-      </div>
-    </div>
-    <!-- close -->
-    <!-- <div class="flex flex-wrap my-5 -mx-2">
 
-      <div class="w-full lg:w-1/3 p-2">
+    </nav>
+    <!-- search start -->
+    <form class="max-w-md mx-auto my-2">   
+      <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+      <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+          </div>
+          <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Quick Search ..." required />
+          <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+      </div>
+    </form>
+    <!-- search close -->
+    <!-- dashboard main start -->
+    <div class="p-4 hidden" id="Dashboard_content">
+      <div class="p-4  rounded-lg  mt-14">
+        <div class="flex flex-wrap my-5 -mx-2">
+
+      <div class="w-full p-2">
         <div
           class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
           <div
@@ -611,9 +921,17 @@
     <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
       role="alert">
       <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
-    </div> -->
+    </div>
 
 
+        i am dashboard {current analysis}
+        its showing current occuring entities like patient joins today,staff joins today ,doctor joins today,doctor
+        works today,
+        doctor not present today,total patient no successful his disease,hospital rating of hospital given by patients
+      </div>
+    </div>
+    <!-- close -->
+    
 
   </div>
 
@@ -634,37 +952,36 @@
 
   <aside id="logo-sidebar2"
     class="overflow-auto scroll-smooth no-scrollbar fixed top-16 right-0 z-40 w-64 h-screen pt-34  border-l bg-[#1E293B] transition-transform translate-x-full ">
-      <!-- start -->
+    <!-- start -->
 
-      <div
-        class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-          class="w-4 h-4">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <div>
+    <div
+      class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <div>
 
 
-          <ul class="space-y-2 font-medium">
-            <li>
-              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                class="flex items-center">
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
-                <span class="ms-3">Manage User role</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
+              <span class="ms-3">Manage User role</span>
+            </a>
+          </li>
+        </ul>
 
       </div>
 
-      <!-- close -->
-           <!-- start -->
 
-      <div
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-4 h-4">
@@ -676,8 +993,7 @@
 
         <ul class="space-y-2 font-medium">
           <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
               <span class="ms-3">Patient Management</span>
             </a>
@@ -690,37 +1006,9 @@
     </div>
 
     <!-- close -->
-         <!-- start -->
+    <!-- start -->
 
-         <div
-         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-           class="w-4 h-4">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-         </svg>
-         <div>
- 
- 
-           <ul class="space-y-2 font-medium">
-             <li>
-               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                 class="flex items-center">
- 
-                 <span class="ms-3">Room & Bed Management</span>
-               </a>
-             </li>
-           </ul>
- 
-         </div>
- 
- 
-       </div>
- 
-       <!-- close -->
-            <!-- start -->
-
-      <div
+    <div
       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-4 h-4">
@@ -732,10 +1020,9 @@
 
         <ul class="space-y-2 font-medium">
           <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
-              <span class="ms-3">Doctor  Management</span>
+              <span class="ms-3">OPD Management</span>
             </a>
           </li>
         </ul>
@@ -746,65 +1033,9 @@
     </div>
 
     <!-- close -->
-         <!-- start -->
+    <!-- start -->
 
-         <div
-         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-           class="w-4 h-4">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-         </svg>
-         <div>
- 
- 
-           <ul class="space-y-2 font-medium">
-             <li>
-               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                 class="flex items-center">
- 
-                 <span class="ms-3">Staff Management</span>
-               </a>
-             </li>
-           </ul>
- 
-         </div>
- 
- 
-       </div>
- 
-       <!-- close -->
-      <!-- start -->
-
-      <div
-        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-4 h-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-        </svg>
-        <div>
-
-
-          <ul class="space-y-2 font-medium">
-            <li>
-              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                class="flex items-center">
-
-                <span class="ms-3">Inventory Management</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-
-      </div>
-
-      <!-- close -->
-        <!-- start -->
-
-      <div
+    <div
       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-4 h-4">
@@ -816,10 +1047,9 @@
 
         <ul class="space-y-2 font-medium">
           <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
-              <span class="ms-3"> Emergency Management</span>
+              <span class="ms-3">IPD Management</span>
             </a>
           </li>
         </ul>
@@ -830,37 +1060,9 @@
     </div>
 
     <!-- close -->
-      <!-- start -->
+    <!-- start -->
 
-      <div
-        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-4 h-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-        </svg>
-        <div>
-
-
-          <ul class="space-y-2 font-medium">
-            <li>
-              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                class="flex items-center">
-
-                <span class="ms-3">Service Management</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-
-      </div>
-
-      <!-- close -->
-        <!-- start -->
-
-      <div
+    <div
       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-4 h-4">
@@ -872,8 +1074,496 @@
 
         <ul class="space-y-2 font-medium">
           <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Surgical Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">ICU Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Maternity and Childcare Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3"> Dental Services
+                Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Critical Care Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Preventive and Wellness Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3"> Mental Health and Psychiatric Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Ambulance Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Blood Bank and Transfusion Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Radiology and Imaging Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3"> Organ Transplantation Services
+                Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Dental Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Room & Bed Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Doctor Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Staff Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Inventory Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3"> Emergency Services Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Service Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
               <span class="ms-3">Insurance Management</span>
             </a>
@@ -889,6 +1579,60 @@
     <!-- start -->
 
     <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Report and Analytics Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+
+              <span class="ms-3">Department Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+         <!-- start -->
+
+    <div
     class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-4 h-4">
@@ -900,10 +1644,9 @@
 
       <ul class="space-y-2 font-medium">
         <li>
-          <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-            class="flex items-center">
+          <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
-            <span class="ms-3">Report and Analytics Management</span>
+            <span class="ms-3">Security and Maintanance</span>
           </a>
         </li>
       </ul>
@@ -914,174 +1657,6 @@
   </div>
 
   <!-- close -->
-       <!-- start -->
-
-       <div
-       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-         class="w-4 h-4">
-         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-       </svg>
-       <div>
-
-
-         <ul class="space-y-2 font-medium">
-           <li>
-             <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-               class="flex items-center">
-
-               <span class="ms-3">Department Management</span>
-             </a>
-           </li>
-         </ul>
-
-       </div>
-
-
-     </div>
-
-     <!-- close -->
-          <!-- start -->
-
-          <div
-          class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-          </svg>
-          <div>
-  
-  
-            <ul class="space-y-2 font-medium">
-              <li>
-                <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                  class="flex items-center">
-  
-                  <span class="ms-3">Service Management</span>
-                </a>
-              </li>
-            </ul>
-  
-          </div>
-  
-  
-        </div>
-  
-        <!-- close -->
-             <!-- start -->
-
-      <div
-      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-      </svg>
-      <div>
-
-
-        <ul class="space-y-2 font-medium">
-          <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
-
-              <span class="ms-3">Service Management</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-    <!-- close -->
-         <!-- start -->
-
-         <div
-         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-           class="w-4 h-4">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-         </svg>
-         <div>
- 
- 
-           <ul class="space-y-2 font-medium">
-             <li>
-               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                 class="flex items-center">
- 
-                 <span class="ms-3">Service Management</span>
-               </a>
-             </li>
-           </ul>
- 
-         </div>
- 
- 
-       </div>
- 
-       <!-- close -->
-            <!-- start -->
-
-      <div
-      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-      </svg>
-      <div>
-
-
-        <ul class="space-y-2 font-medium">
-          <li>
-            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-              class="flex items-center">
-
-              <span class="ms-3">Service Management</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-    <!-- close -->
-         <!-- start -->
-
-         <div
-         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-           class="w-4 h-4">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-         </svg>
-         <div>
- 
- 
-           <ul class="space-y-2 font-medium">
-             <li>
-               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                 class="flex items-center">
- 
-                 <span class="ms-3">Service Management</span>
-               </a>
-             </li>
-           </ul>
- 
-         </div>
- 
- 
-       </div>
- 
-       <!-- close -->
 
   </aside>
 
