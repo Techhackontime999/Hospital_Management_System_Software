@@ -15,1004 +15,146 @@
     {% tailwind_css %}
 </head>
 
-<body class="">
-    {% load static %}
+<body class="bg-gray-100">
 
-    <!-- new navbar start -->
-
-
-
+    <!-- Navbar start -->
     <nav class="fixed top-0 z-50 w-full bg-black border-b border-gray-600 dark:bg-black dark:border-gray-600">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
-                <div class="flex items-center justify-start rtl:justify-end">
-                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
-                        aria-controls="logo-sidebar" type="button"
-                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                        <span class="sr-only">Open sidebar</span>
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
+                <div class="flex items-center justify-start">
+                    <!-- Left sidebar toggle button -->
+                    <button data-drawer-target="logo-sidebar1" data-drawer-toggle="logo-sidebar1"
+                        aria-controls="logo-sidebar1" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg max-2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <span class="sr-only">Open left sidebar</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                             <path clip-rule="evenodd" fill-rule="evenodd"
                                 d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
                             </path>
                         </svg>
                     </button>
+
+
+                </div>
+
+
+                <div class="flex items-center  justify-start rtl:justify-end">
+
                     <a href="https://flowbite.com" class="flex ms-2 md:me-24">
                         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
                         <span
-                            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+                            class="self-center text-sm font-semibold sm:text-xl whitespace-nowrap dark:text-white">WELCOME
+                            DR_SERVE HMS </span>
                     </a>
                 </div>
-                <!-- profile start -->
-                <div class="flex items-center">
 
+                <!-- Profile button -->
+                <div class="flex items-center justify-center">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+                    </button>
+                    <h4 class=" text-white text-sm ml-2"> P.M.C.H Patna</h4>
+                </div>
 
-                    <div class="relative flex items-center ms-3">
-                        <div>
-                            <button type="button"
-                                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                                <span class="sr-only">Open user menu</span>
-                                <img class="w-8 h-8 rounded-full"
-                                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                    alt="user photo">
-                            </button>
-                        </div>
+                <!-- Right sidebar toggle button -->
+                <div class="flex items-center justify-end">
 
-                        <!-- Dropdown menu -->
-
-                    </div>
-
+                    <!-- Left sidebar toggle button -->
+                    <button data-drawer-target="logo-sidebar2" data-drawer-toggle="logo-sidebar2"
+                        aria-controls="logo-sidebar2" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg max-2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <span class="sr-only">Open left sidebar</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
 
 
                 </div>
-                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-                    id="dropdown-user">
-                    <div class="px-4 py-3" role="none">
-                        <p class="text-sm text-gray-900 dark:text-white" role="none">
-                            Neil Sims
-                        </p>
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                            neil.sims@flowbite.com
-                        </p>
-                    </div>
-                    <ul class="py-1" role="none">
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600">Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600">Sign
-                                Out</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- profile close -->
+
+
+
             </div>
-        </div>
-        </div>
         </div>
     </nav>
+    <!-- Navbar end -->
 
-    <aside id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-black border-r border-gray-600 sm:translate-x-0 dark:bg-black "
-        aria-label="Sidebar">
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-black">
-            <ul class="space-y-2 font-medium">
-                <li>
-                    <a href="#" id="patient-signin-tab" data-tabs-target="#patient-signin_content" role="tab1"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 20 18">
-                            <path
-                                d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                        </svg>
-                        <span class="ms-3">Hospital Admin Login</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 18 18">
-                            <path
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                        </svg>
-                        <span class="ms-3">Dashboard</span>
-                    </a>
-                </li>
+    <!-- Layout with two sidebars and main content -->
+    <div class="flex pt-20">
 
-                <li>
-                    <a href="#" id="Appointment-tab" data-tabs-target="#Appointment_content" role="tab3"
-                        class="flex items-center  p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">Appointment</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" id="Payment-tab" data-tabs-target="#Payment_content" role="tab4"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 20 18">
-                            <path
-                                d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                        </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Make Payment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Reciept-tab" data-tabs-target="#Reciept_content" role="tab5"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">Get Reciept</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Quieue-tab" data-tabs-target="#Quieue_content" role="tab6"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">See Quiue</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Pastreport-tab" data-tabs-target="#Pastreport_content" role="tab7"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">See Past Report</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Analysis-tab" data-tabs-target="#Analysis_content" role="tab8"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">Health Analysis</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="Contactus-tab" data-tabs-target="#Contactus_content" role="tab9"
-                        class="flex items-center p-2 text-gray-900   rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">Contact us</span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
-                            <path
-                                d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
-                            <path
-                                d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
-                        </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Sign Out</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- speed dial start -->
-
-
-        <div data-dial-init class="fixed end-6 bottom-6 group">
-            <div id="speed-dial-menu-square" class="flex-col items-center hidden mb-4 space-y-2">
-                <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left"
-                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 18 18">
-                        <path
-                            d="M14.419 10.581a3.564 3.564 0 0 0-2.574 1.1l-4.756-2.49a3.54 3.54 0 0 0 .072-.71 3.55 3.55 0 0 0-.043-.428L11.67 6.1a3.56 3.56 0 1 0-.831-2.265c.006.143.02.286.043.428L6.33 6.218a3.573 3.573 0 1 0-.175 4.743l4.756 2.491a3.58 3.58 0 1 0 3.508-2.871Z" />
-                    </svg>
-                    <span class="sr-only">Share</span>
-                </button>
-                <div id="tooltip-share" role="tooltip"
-                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Share
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <button type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left"
-                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 20 20">
-                        <path d="M5 20h10a1 1 0 0 0 1-1v-5H4v5a1 1 0 0 0 1 1Z" />
-                        <path
-                            d="M18 7H2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-1-2V2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3h14Z" />
-                    </svg>
-                    <span class="sr-only">Print</span>
-                </button>
-                <div id="tooltip-print" role="tooltip"
-                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Print
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <button type="button" data-tooltip-target="tooltip-download" data-tooltip-placement="left"
-                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 20 20">
-                        <path
-                            d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
-                        <path
-                            d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
-                    </svg>
-                    <span class="sr-only">Download</span>
-                </button>
-                <div id="tooltip-download" role="tooltip"
-                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Download
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <button type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left"
-                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 dark:hover:text-white shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 18 20">
-                        <path
-                            d="M5 9V4.13a2.96 2.96 0 0 0-1.293.749L.879 7.707A2.96 2.96 0 0 0 .13 9H5Zm11.066-9H9.829a2.98 2.98 0 0 0-2.122.879L7 1.584A.987.987 0 0 0 6.766 2h4.3A3.972 3.972 0 0 1 15 6v10h1.066A1.97 1.97 0 0 0 18 14V2a1.97 1.97 0 0 0-1.934-2Z" />
-                        <path
-                            d="M11.066 4H7v5a2 2 0 0 1-2 2H0v7a1.969 1.969 0 0 0 1.933 2h9.133A1.97 1.97 0 0 0 13 18V6a1.97 1.97 0 0 0-1.934-2Z" />
-                    </svg>
-                    <span class="sr-only">Copy</span>
-                </button>
-                <div id="tooltip-copy" role="tooltip"
-                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    Copy
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+        <!-- Left sidebar -->
+        <aside id="logo-sidebar1"
+            class="overflow-auto scroll-smooth fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-black border-r border-gray-600 transition-transform -translate-x-full max-2xl:translate-x-0">
+            <div class="h-full px-3 pb-4 overflow-y-auto">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-white hover:bg-gray-700">
+                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Z" />
+                            </svg>
+                            <span class="ml-3">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <button type="button" data-dial-toggle="speed-dial-menu-square" aria-controls="speed-dial-menu-square"
-                aria-expanded="false"
-                class="flex items-center justify-center text-white bg-blue-700 rounded-lg w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
-                <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 1v16M1 9h16" />
-                </svg>
-                <span class="sr-only">Open actions menu</span>
-            </button>
+        </aside>
+
+        <!-- Main content start-->
+        <div class=" bg-gray-100 p-10 mx-auto justify-center">
+            <h1 class="text-2xl font-bold">Main Content Area</h1>
+            <p>Here goes the content that will be in the middle of the page between both sidebars.</p>
+            <!-- Add your main content here -->
         </div>
+        <!-- Main content close -->
+        <!-- Right sidebar -->
+        <aside id="logo-sidebar2"
+            class="overflow-auto scroll-smooth  fixed top-0 right-0 z-40 w-64 h-screen pt-20 bg-black border-l border-gray-600 transition-transform translate-x-full max-2xl:translate-x-0">
+            <div class="h-full px-3 pb-4 overflow-y-auto">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-white hover:bg-gray-700">
+                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Z" />
+                            </svg>
+                            <span class="ml-3">Profile</span>
+                        </a>
+                    </li>
 
-        <!-- speed dial close -->
-    </aside>
-    <!-- main start -->
-    <!-- it's default patient-signin-content main start -->
-    <div class="p-4 sm:ml-64 " id="patient-signin_content">
-        <div class="p-4  rounded-lg  mt-14">
 
-            <!-- Login/Authentication Tab (Default content) -->
-            <div id="login_content" class="p-6 bg-gray-100 dark:bg-gray-800">
-                <h2 class="text-2xl font-bold mb-4">Login</h2>
-                <form id="login-form" class="space-y-4">
-                    <div>
-                        <label for="username"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Username</label>
-                        <input type="text" id="username"
-                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                            required>
-                    </div>
-                    <div>
-                        <label for="password"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
-                        <input type="password" id="password"
-                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                            required>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Login
-                    </button>
-                </form>
+                    <!-- Add more sidebar items here -->
+                </ul>
             </div>
-        </div>
-    </div>
-    <!-- patien-signin-content main close -->
-    <!-- dashboard main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Dashboard_content">
-        <div class="p-4  rounded-lg  mt-14">
-            i am dashboard
-        </div>
-    </div>
-    <!-- dashboard main close -->
-    <!-- Appointment main start -->
-    <div class="p-4 sm:ml-64 hidden bg-gray-900" id="Appointment_content">
-        <div class="p-4  rounded-lg  mt-14">
-            <!-- content start here -->
-
-
-            <div class="grid grid-cols-3 gap-4 mb-4 ">
-                <!-- tab 1 button here -->
-                <div class="flex items-center justify-center h-24 rounded ">
-
-                    <div class="mb-4 ">
-                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
-                            data-tabs-toggle="#default-tab-content" role="tablist">
-
-                            <li class="me-2" role="presentation">
-                                <!-- Button -->
-                                <button type="button"
-                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-red-600 to-lime-200 hover:bg-gradient-to-l hover:from-red-400 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                                    id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
-                                    aria-controls="dashboard" aria-selected="false">
-                                    Add Personal Details +
-
-                                </button>
-                            </li>
-
-
-                        </ul>
-                    </div>
-
-
-
-
-                </div>
-                <!-- tab 2 button here -->
-
-                <div class="flex items-center justify-center h-24 rounded ">
-
-                    <div class="mb-4 ">
-                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
-                            data-tabs-toggle="#default-tab-content" role="tablist">
-                            <li class="me-2" role="presentation">
-                                <button type="button"
-                                    class="h-[65px] inline-block text-gray-900  bg-gradient-to-r from-sky-500 to-lime-200 hover:bg-gradient-to-l hover:from-sky-300 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                                    id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
-                                    aria-controls="settings" aria-selected="false">
-                                    Add Hospital Details +
-
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-                <!-- tab 3 button here -->
-
-                <div class="flex items-center justify-center h-24 rounded ">
-                    <div class="mb-4 ">
-                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
-                            data-tabs-toggle="#default-tab-content" role="tablist">
-                            <li class="me-2" role="presentation">
-                                <button type="button"
-                                    class="h-[65px] inline-block text-gray-900 bg-gradient-to-r from-green-500 to-lime-200 hover:bg-gradient-to-l hover:from-green-300 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                                    id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
-                                    aria-controls="contacts" aria-selected="false">
-                                    Confirm and Final Submit +
-
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div
-                class=" mx-auto my-14 flex items-center justify-center h-[100%] mb-4 rounded-2xl  shadow border-2 border-gray-500">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-
-
-                    <!--book data tab start -->
-                <div id="default-tab-content ">
-
-                    <!-- tab 1 -->
-
-                    <div class="hidden p-4 py-14 rounded-lg " id="dashboard" role="tabpanel"
-                        aria-labelledby="dashboard-tab">
-                        <h2 class="text-4xl font-extrabold dark:text-white">Adding your details</h2>
-                        <form class="mt-4">
-                            <div class="grid gap-6 mb-6 md:grid-cols-2">
-                                <div>
-                                    <label for="first_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
-                                        name</label>
-                                    <input type="text" id="first_name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="John" required />
-                                </div>
-                                <div>
-                                    <label for="last_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
-                                        name</label>
-                                    <input type="text" id="last_name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Doe" required />
-                                </div>
-                                <div>
-                                    <label for="company"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
-                                    <input type="text" id="company"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Flowbite" required />
-                                </div>
-                                <div>
-                                    <label for="phone"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
-                                        number</label>
-                                    <input type="tel" id="phone"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
-                                </div>
-                                <div>
-                                    <label for="website"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website
-                                        URL</label>
-                                    <input type="url" id="website"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="flowbite.com" required />
-                                </div>
-                                <div>
-                                    <label for="visitors"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unique
-                                        visitors (per month)</label>
-                                    <input type="number" id="visitors"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="" required />
-                                </div>
-                            </div>
-                            <div class="mb-6">
-                                <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
-                                    address</label>
-                                <input type="email" id="email"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="john.doe@company.com" required />
-                            </div>
-                            <div class="mb-6">
-                                <label for="password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                <input type="password" id="password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="•••••••••" required />
-                            </div>
-                            <div class="mb-6">
-                                <label for="confirm_password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
-                                    password</label>
-                                <input type="password" id="confirm_password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="•••••••••" required />
-                            </div>
-                            <div class="flex items-start mb-6">
-                                <div class="flex items-center h-5">
-                                    <input id="remember" type="checkbox" value=""
-                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                                        required />
-                                </div>
-                                <label for="remember"
-                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the
-                                    <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and
-                                        conditions</a>.</label>
-                            </div>
-                            <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                        </form>
-
-
-
-
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                    <!-- tab 2 -->
-                    <div class="hidden p-4 py-14 rounded-lg " id="settings" role="tabpanel"
-                        aria-labelledby="settings-tab">
-
-
-                        <!-- search start -->
-
-                        <!-- search start -->
-                        <h2 class="text-4xl font-extrabold dark:text-white">Choose your hospital</h2>
-
-                        <form class="my-8 max-w-full mx-auto">
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-4">
-                                <!-- First Select -->
-                                <div>
-                                    <label for="country1"
-                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
-                                        select</label>
-                                    <select id="country1"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected>Choose a country</option>
-                                        <option value="US">United States</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="FR">France</option>
-                                        <option value="DE">Germany</option>
-                                    </select>
-                                </div>
-
-                                <!-- Second Select -->
-                                <div>
-                                    <label for="country2"
-                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
-                                        select</label>
-                                    <select id="country2"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected>Choose a country</option>
-                                        <option value="US">United States</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="FR">France</option>
-                                        <option value="DE">Germany</option>
-                                    </select>
-                                </div>
-
-                                <!-- Third Select -->
-                                <div>
-                                    <label for="country3"
-                                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
-                                        select</label>
-                                    <select id="country3"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected>Choose a country</option>
-                                        <option value="US">United States</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="FR">France</option>
-                                        <option value="DE">Germany</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                        </form>
-                        <!-- search bar close -->
-
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Contacts tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-
-                    </div>
-                    <!-- tab 3 -->
-                    <div class="hidden p-4 py-14 rounded-lg " id="contacts" role="tabpanel"
-                        aria-labelledby="contacts-tab">
-                        <h2 class="text-4xl font-extrabold dark:text-white">Check and done</h2>
-                        <form class="mt-4 ">
-                            <div class="grid gap-6 mb-6 md:grid-cols-2">
-                                <div>
-                                    <label for="first_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
-                                        name</label>
-                                    <input type="text" id="first_name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="John" required />
-                                </div>
-                                <div>
-                                    <label for="last_name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
-                                        name</label>
-                                    <input type="text" id="last_name"
-                                        class="cursor-not-allowed bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        disabled value="Disabled text add here" placeholder="Doe" required />
-                                </div>
-                                <div>
-                                    <label for="company"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
-                                    <input type="text" id="company"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Flowbite" required />
-                                </div>
-                                <div>
-                                    <label for="phone"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
-                                        number</label>
-                                    <input type="tel" id="phone"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
-                                </div>
-                                <div>
-                                    <label for="website"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website
-                                        URL</label>
-                                    <input type="url" id="website"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="flowbite.com" required />
-                                </div>
-                                <div>
-                                    <label for="visitors"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unique
-                                        visitors (per month)</label>
-                                    <input type="number" id="visitors"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="" required />
-                                </div>
-                            </div>
-                            <div class="mb-6">
-                                <label for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
-                                    address</label>
-                                <input type="email" id="email"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="john.doe@company.com" required />
-                            </div>
-                            <div class="mb-6">
-                                <label for="password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                <input type="password" id="password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="•••••••••" required />
-                            </div>
-                            <div class="mb-6">
-                                <label for="confirm_password"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
-                                    password</label>
-                                <input type="password" id="confirm_password"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="•••••••••" required />
-                            </div>
-                            <div class="flex items-start mb-6">
-                                <div class="flex items-center h-5">
-                                    <input id="remember" type="checkbox" value=""
-                                        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                                        required />
-                                </div>
-                                <label for="remember"
-                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the
-                                    <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and
-                                        conditions</a>.</label>
-                            </div>
-                            <button type="submit"
-                                class="text-white bg-red-600 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Final
-                                Submit</button>
-
-
-
-
-
-                        </form>
-
-
-
-
-
-
-
-
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            </p>
-        </div>
-        <!-- book data tab close -->
+        </aside>
 
     </div>
-    </div>
-
-    <!-- Appointment main close -->
-    <!-- payment main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Payment_content">
-        <div class="p-4  rounded-lg  mt-14">
-            i am payment
-        </div>
-    </div>
-    <!-- payment main close -->
-    <!-- Reciept main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Reciept_content">
-        <div class="p-4  rounded-lg  mt-14">
-            i am Reciept
-        </div>
-    </div>
-    <!-- Reciept main close -->
-    <!-- Quieue main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Quieue_content">
-        <div class="p-4  rounded-lg  mt-14">
-            i am Quieue
-        </div>
-    </div>
-    <!-- Quieue main close -->
-    <!-- contact us main start -->
-    <div class="p-4 sm:ml-64 hidden" id="Contactus_content">
-        <div class="p-4  rounded-lg  mt-14">
-            i am contact us
-        </div>
-    </div>
-    <!-- contact us main close -->
-
-<!-- Analysis start here -->
-<div class="p-4 sm:ml-64 hidden" id="Analysis_content">
-    <div class="p-4  rounded-lg  mt-14">
-        i am analysis
-    </div>
-</div>
-<!-- Analysis close here -->
-<!-- Past report start -->
-<div class="p-4 sm:ml-64 hidden" id="Pastreport_content">
-    <div class="p-4  rounded-lg  mt-14">
-        i am pastreport 
-    </div>
-</div>
-<!-- past report close -->
-
-    <!-- main close -->
-
-
-
-
-
 
     <script>
-        // Select the toggle button and the sidebar
-        const drawerToggle = document.querySelector('[data-drawer-toggle="logo-sidebar"]');
-        const sidebar = document.getElementById('logo-sidebar');
+        // Toggle buttons for sidebars
+        const leftSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar1"]');
+        const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
 
-        // Function to toggle sidebar visibility
-        function toggleSidebar() {
-            // Toggle the sidebar class
+        leftSidebarToggle.addEventListener('click', function () {
+            const sidebar = document.getElementById('logo-sidebar1');
             sidebar.classList.toggle('-translate-x-full');
-        }
-
-        // Add event listener to the toggle button
-        drawerToggle.addEventListener('click', toggleSidebar);
-
-
-
-        // profile javascript
-        // Get the dropdown button and the dropdown menu
-        const dropdownToggle = document.querySelector('[data-dropdown-toggle="dropdown-user"]');
-        const dropdownMenu = document.getElementById('dropdown-user');
-
-        // Function to toggle the dropdown
-        const toggleDropdown = () => {
-            dropdownMenu.classList.toggle('hidden');
-        };
-
-        // Add click event listener to the dropdown button
-        dropdownToggle.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevents the click from closing the dropdown if clicked inside
-            toggleDropdown();
         });
 
-        // Close the dropdown if clicked outside
-        window.addEventListener('click', (event) => {
-            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add('hidden');
-            }
-        });
-
-
-
-    </script>
-
-    <!-- speed dial javascript start -->
-    <script>
-        // Get the toggle button and the speed dial menu
-        const dialToggle = document.querySelector('[data-dial-toggle="speed-dial-menu-square"]');
-        const dialMenu = document.getElementById('speed-dial-menu-square');
-
-        // Function to toggle the speed dial menu visibility
-        const toggleSpeedDial = () => {
-            dialMenu.classList.toggle('hidden');
-        };
-
-        // Add click event listener to the main button to toggle the menu
-        dialToggle.addEventListener('click', (event) => {
-            event.stopPropagation();  // Stop event propagation to avoid unwanted behavior
-            toggleSpeedDial();
-        });
-
-        // Optionally: Close the speed dial if clicked outside
-        window.addEventListener('click', (event) => {
-            if (!dialToggle.contains(event.target) && !dialMenu.contains(event.target)) {
-                dialMenu.classList.add('hidden');
-            }
-        });
-
-    </script>
-
-
-    <!-- speed dial javascript close -->
-
-    <!-- tab switching js start -->
-    <script>
-        // Select all tab buttons
-        const tabButtons = document.querySelectorAll('[role="tab"]');
-        // Select all tab content elements
-        const tabContents = document.querySelectorAll('[role="tabpanel"]');
-
-        // Function to handle tab change
-        const handleTabChange = (event) => {
-            // Hide all tab contents
-            tabContents.forEach(content => {
-                content.classList.add('hidden');
-                content.setAttribute('aria-selected', 'false');
-            });
-
-            // Remove active class from all tabs
-            tabButtons.forEach(button => {
-                button.classList.remove('border-blue-500', 'text-blue-600');
-                button.setAttribute('aria-selected', 'false');
-            });
-
-            // Show the clicked tab's content
-            const targetContent = document.querySelector(event.currentTarget.getAttribute('data-tabs-target'));
-            targetContent.classList.remove('hidden');
-            targetContent.setAttribute('aria-selected', 'true');
-
-            // Add active class to the clicked tab
-            event.currentTarget.classList.add('border-blue-500', 'text-blue-600');
-        };
-
-        // Attach click event listeners to each tab button
-        tabButtons.forEach(button => {
-            button.addEventListener('click', handleTabChange);
-        });
-
-        // Optionally: Activate the first tab on page load
-        if (tabButtons.length > 0) {
-            tabButtons[0].click();
-        }
-    </script>
-    <!-- tab switching js close -->
-
-    <!-- language js start -->
-
-    <!-- language js close -->
-
-    <!-- script for aside navlink start-->
-   
-    <script>
-        // Simulate user authentication (for demo purposes, it always succeeds)
-        function authenticateUser(username, password) {
-            return username === "admin" && password === "password";
-        }
-
-        document.getElementById('login-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form submission
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Check if authentication is successful
-            if (authenticateUser(username, password)) {
-                alert('Login successful!');
-                
-
-
-                // Enable the other tabs (Dashboard & Settings)
-                let DashboardTab = document.getElementById('Dashboard-tab');
-                let AppointmentTab = document.getElementById('Appointment-tab');
-                let PaymentTab = document.getElementById('Payment-tab');
-                let RecieptTab = document.getElementById('Reciept-tab');
-                let ContactTab = document.getElementById('Contactus-tab');
-
-                let QuieueTab = document.getElementById('Quieue-tab');
-                let PastreportTab = document.getElementById('Pastreport-tab');
-                let AnalysisTab = document.getElementById('Analysis-tab');
-
-
-                // Ensure that pointer-events-none and opacity-50 are removed properly
-                ContactTab.classList.remove('pointer-events-none', 'opacity-50');
-
-                QuieueTab.classList.remove('pointer-events-none', 'opacity-50');
-
-                RecieptTab.classList.remove('pointer-events-none', 'opacity-50');
-                AppointmentTab.classList.remove('pointer-events-none', 'opacity-50');
-               
-                PaymentTab.classList.remove('pointer-events-none', 'opacity-50');
-
-                AppointmentTab.classList.remove('pointer-events-none', 'opacity-50');
-                PastreportTab.classList.remove('pointer-events-none', 'opacity-50');
-                AnalysisTab.classList.remove('pointer-events-none', 'opacity-50');
-
-                // Ensure that pointer-events-none and opacity-50 are removed properly
-
-
-
-
-                // Hide login form
-                document.getElementById('login_content').classList.add('hidden');
-            } else {
-                alert('Invalid credentials. Please try again.');
-            }
-        });
-
-        // Handle tab navigation
-        document.querySelectorAll('[data-tabs-target]').forEach(button => {
-            button.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                if (!button.classList.contains('pointer-events-none')) {
-                    const targetTab = button.getAttribute('data-tabs-target');
-                    document.querySelectorAll('[id$="_content"]').forEach(tab => tab.classList.add('hidden'));
-                    document.querySelector(targetTab).classList.remove('hidden');
-                } else {
-                    alert('Please log in to access this tab.');
-                }
-            });
+        rightSidebarToggle.addEventListener('click', function () {
+            const sidebar = document.getElementById('logo-sidebar2');
+            sidebar.classList.toggle('translate-x-full');
         });
     </script>
-   
-    
 
-
-    <!-- script for aside navlink close-->
 
 </body>
 
 </html>
-      
-    <!-- <button type="button" id="rightMenuButton"
-    class="relative inline-flex items-center px-4 py-2  justify-center mx-2 rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-    <span class="sr-only">Open main menu</span>
-    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-        stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-</button> -->
-    <!-- Right Menu -->
-    <!-- <div id="rightMenu"
-        class="fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="flex justify-between items-center bg-gray-900 p-4">
-            <h2 class="text-xl">Right Menu</h2>
-            <button id="closeRightMenu" class="text-3xl">&times;</button>
-        </div>
-        <ul class="p-4">
-            <li class="py-2"><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
-            <li class="py-2"><a href="#" class="text-white hover:text-gray-300">Help</a></li>
-            <li class="py-2"><a href="#" class="text-white hover:text-gray-300">Settings</a></li>
-        </ul>
-    </div> -->
-
-
- 

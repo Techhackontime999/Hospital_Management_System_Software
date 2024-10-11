@@ -21,6 +21,9 @@ from .import views
 urlpatterns = [
     path('', views.Home,name='Home'),
     path('Management/', views.Management,name='Management'),
+    
+
+
 
 
     
