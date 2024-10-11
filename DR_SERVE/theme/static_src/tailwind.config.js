@@ -59,6 +59,17 @@ module.exports = {
     },
   },
   plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none', /* IE and Edge */
+          'scrollbar-width': 'none', /* Firefox */
+        },
+        '.no-scrollbar::-webkit-scrollbar': {
+          'display': 'none', /* Chrome, Safari, Opera */
+        },
+      });
+    },
     /**
      * '@tailwindcss/forms' is the forms plugin that provides a minimal styling
      * for forms. If you don't like it or have own styling for forms,

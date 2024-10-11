@@ -1,160 +1,1202 @@
 {% load static tailwind_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    {% tailwind_css %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DR.SERVE</title>
+  {% tailwind_css %}
 </head>
+{% load static %}
 
-<body class="bg-gray-100">
+<!-- component -->
+<!-- full tailwind config using javascript -->
+<!-- https://github.com/neurolinker/popice -->
 
-    <!-- Navbar start -->
-    <nav class="fixed top-0 z-50 w-full bg-black border-b border-gray-600 dark:bg-black dark:border-gray-600">
-        <div class="px-3 py-3 lg:px-5 lg:pl-3">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center justify-start">
-                    <!-- Left sidebar toggle button -->
-                    <button data-drawer-target="logo-sidebar1" data-drawer-toggle="logo-sidebar1"
-                        aria-controls="logo-sidebar1" type="button"
-                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg max-2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                        <span class="sr-only">Open left sidebar</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                            <path clip-rule="evenodd" fill-rule="evenodd"
-                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-                            </path>
-                        </svg>
-                    </button>
+<body class="body bg-cyan-100 ">
+  <div class="fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
+    <div
+      class=" logo  dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
+      <h1 class="font-bold  text-blue-600 text-[0px] sm:ml-12 sm:text-lg "> DR_SERVE</h1>
+    </div>
+    <!-- SPACER -->
+    <div
+      class="grow h-[200px] flex items-center justify-center overflow-x-scroll no-scrollbar  space-x-5 overflow-y-hidden   pl-44 sm:pl-auto ">
 
-
-                </div>
-
-
-                <div class="flex items-center  justify-start rtl:justify-end">
-
-                    <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                        <span
-                            class="self-center text-sm font-semibold sm:text-xl whitespace-nowrap dark:text-white">WELCOME
-                            DR_SERVE HMS </span>
-                    </a>
-                </div>
-
-                <!-- Profile button -->
-                <div class="flex items-center justify-center">
-                    <button type="button"
-                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                        <span class="sr-only">Open user menu</span>
-                        <img class="w-8 h-8 rounded-full"
-                            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
-                    </button>
-                    <h4 class=" text-white text-sm ml-2"> P.M.C.H Patna</h4>
-                </div>
-
-                <!-- Right sidebar toggle button -->
-                <div class="flex items-center justify-end">
-
-                    <!-- Left sidebar toggle button -->
-                    <button data-drawer-target="logo-sidebar2" data-drawer-toggle="logo-sidebar2"
-                        aria-controls="logo-sidebar2" type="button"
-                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg max-2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                        <span class="sr-only">Open left sidebar</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                            <path clip-rule="evenodd" fill-rule="evenodd"
-                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-                            </path>
-                        </svg>
-                    </button>
-
-
-                </div>
-
-
-
-            </div>
+      <button
+        class="rounded-md font-bold sm:ml-8 ml-40  bg-gray-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+            stroke="currentColor" class="w-4 h-4">
+            <path strokeLinecap="round" strokeLinejoin="round"
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+          <!-- Tooltip -->
+          <div
+            class="absolute top-9   px-4 py-3 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Home</h1>
+          </div>
         </div>
-    </nav>
-    <!-- Navbar end -->
+      </button>
+      <button
+        class="mx-1 sm:mx-3 rounded-md bg-gray-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
 
-    <!-- Layout with two sidebars and main content -->
-    <div class="flex pt-20">
-
-        <!-- Left sidebar -->
-        <aside id="logo-sidebar1"
-            class="overflow-auto scroll-smooth fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-black border-r border-gray-600 transition-transform -translate-x-full max-2xl:translate-x-0">
-            <div class="h-full px-3 pb-4 overflow-y-auto">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="flex items-center p-2 text-white hover:bg-gray-700">
-                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Z" />
-                            </svg>
-                            <span class="ml-3">Dashboard</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- Main content start-->
-        <div class=" bg-gray-100 p-10 mx-auto justify-center">
-            <h1 class="text-2xl font-bold">Main Content Area</h1>
-            <p>Here goes the content that will be in the middle of the page between both sidebars.</p>
-            <!-- Add your main content here -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" id="calender">
+            <g transform="translate(871 -962.362)">
+              <path fill="#f05542" d="M-868 965.362h9c.554 0 1 .446 1 1v2.5h-11v-2.5c0-.554.446-1 1-1z" color="#000"
+                overflow="visible" style="marker:none"></path>
+              <path fill="#e9eded" d="M-869 968.362v7c0 .554.446 1 1 1h9c.554 0 1-.446 1-1v-7h-11z"></path>
+              <rect width="3" height="1" x="-867" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
+                ry=".5" style="marker:none"></rect>
+              <rect width="3" height="1" x="-861" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
+                ry=".5" style="marker:none"></rect>
+              <rect width="3" height="1" x="-861" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-863" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-865" y="969.362" fill="#cad1d8" color=...="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-861" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-863" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-865" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-867" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-863" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-865" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+              <rect width="3" height="1" x="-867" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+                style="marker:none"></rect>
+            </g>
+          </svg>
+          <!-- Tooltip -->
+          <div
+            class="absolute top-9   px-6 py-3 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Today's Schedule</h1>
+          </div>
         </div>
-        <!-- Main content close -->
-        <!-- Right sidebar -->
-        <aside id="logo-sidebar2"
-            class="overflow-auto scroll-smooth  fixed top-0 right-0 z-40 w-64 h-screen pt-20 bg-black border-l border-gray-600 transition-transform translate-x-full max-2xl:translate-x-0">
-            <div class="h-full px-3 pb-4 overflow-y-auto">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="flex items-center p-2 text-white hover:bg-gray-700">
-                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path
-                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Z" />
-                            </svg>
-                            <span class="ml-3">Profile</span>
-                        </a>
-                    </li>
+      </button>
+      <button
+        class="flex rounded-md justify-center items-center  bg-gray-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/ambulance_icon.png' %}" alt="ambulance Icon"
+            class="w-[18px] max-w-[18px] md:max-w-[18px] lg:max-w-[18px] xl:max-w-[18px] object-cover">
+
+          <!-- Tooltip -->
+          <div
+            class="absolute top-9 inline  px-8 py-3 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Ambulance Management</h1>
+          </div>
+        </div>
+
+      </button>
+      <button
+        class="rounded-md mx-1 sm:mx-3 bg-gray-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/emergency_icon.png' %}" alt="emergency Icon"
+            class="w-[18px] max-w-[18px] md:max-w-[18px] lg:max-w-[18px] xl:max-w-[18px] object-cover">
+
+          <!-- Tooltip -->
+          <div
+            class="absolute top-7   px-4 py-3 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50"><span class="text-red-600 inline font-bold">X</span> Emergency Services</h1>
+          </div>
+        </div>
+
+      </button>
+      <button
+        class="rounded-md  bg-gray-800  p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/hospitalbed_icon.svg' %}" alt="bed Icon"
+            class="w-[18px] max-w-[18px] md:max-w-[18px] lg:max-w-[18px] xl:max-w-[18px] object-cover">
+          <!-- Tooltip -->
+          <div
+            class="absolute top-9   px-4 py-3 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Bed Management</h1>
+          </div>
+        </div>
+
+      </button>
+
+      <button
+        class="rounded-md mx-1 sm:mx-3 bg-gray-800  p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/patient_icon.png' %}" alt="bed Icon"
+            class="w-[18px] max-w-[18px] md:max-w-[18px] lg:max-w-[18px] xl:max-w-[18px] object-cover">
+          <!-- Tooltip -->
+          <div
+            class="absolute top-7   px-4 py-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Patient Management</h1>
+          </div>
+        </div>
+
+      </button>
+
+      <button
+        class="rounded-md mx-1 sm:mx-3 bg-gray-800  p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/doctor_icon.png' %}" alt="bed Icon"
+            class="w-[19px] max-w-[19px] md:max-w-[19px] lg:max-w-[19px] xl:max-w-[19px] object-cover">
+          <!-- Tooltip -->
+          <div
+            class="absolute top-7   px-4 py-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Doctor Management</h1>
+          </div>
+        </div>
+
+      </button>
+      <button
+        class="rounded-md mx-1 sm:mx-3 bg-gray-800  p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <div class="relative group flex justify-center items-center">
+
+          <img src="{% static 'HospitalApp/images/staff_icon.png' %}" alt="bed Icon"
+            class="h-[22px] w-[18px] max-w-[18px] md:max-w-[18px] lg:max-w-[18px] xl:max-w-[18px] object-cover">
+          <!-- Tooltip -->
+          <div
+            class="absolute top-7   px-4 py-2 text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm">
+            <h1 class="text-gray-50">Staff Management</h1>
+          </div>
+        </div>
+
+      </button>
+    </div>
+    <div class="flex-none h-full text-center flex items-center justify-center">
 
 
-                    <!-- Add more sidebar items here -->
-                </ul>
+      <div class="flex-none h-full text-center flex items-center justify-center">
+        <div class="relative">
+          <div class="flex space-x-3 items-center px-3 cursor-pointer" onclick="toggleDropdown()">
+            <div class="flex-none flex justify-center">
+              <div class="w-8 h-8 flex">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShta_GXR2xdnsxSzj_GTcJHcNykjVKrCBrZ9qouUl0usuJWG2Rpr_PbTDu3sA9auNUH64&usqp=CAU"
+                  alt="profile" class="shadow rounded-full object-cover" />
+              </div>
             </div>
-        </aside>
+            <div class="hidden md:block text-sm md:text-md text-black dark:text-white">P.M.C.H Patna</div>
+          </div>
+
+          <!-- Profile Dropdown -->
+          <div id="dropdown" class="absolute right-0 mt-2 hidden w-48 bg-white dark:bg-[#1E293B] shadow-lg rounded-lg">
+            <a href="#"
+              class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Profile</a>
+            <a href="#"
+              class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Settings</a>
+            <a href="#"
+              class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Logout</a>
+          </div>
+
+
+
+
+
+        </div> <!-- Right sidebar toggle button -->
+
+      </div>
+      <div class="flex items-center justify-end">
+
+        <button data-drawer-target="logo-sidebar2" data-drawer-toggle="logo-sidebar2" aria-controls="logo-sidebar2"
+          type="button"
+          class=" items-center p-1 text-sm text-gray-500 rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open left sidebar</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+          </svg>
+        </button>
+
+
+      </div>
+
+    </div>
+  </div>
+  <aside
+    class="w-60 -translate-x-48 fixed transition transform ease-in-out duration-1000 z-50 flex h-screen bg-[#1E293B] ">
+    <!-- open sidebar button -->
+    <div
+      class="max-toolbar translate-x-24 scale-x-0 w-full -right-6 transition transform ease-in duration-300 flex items-center justify-between border-4 border-white dark:border-[#0F172A] bg-[#1E293B]  absolute top-2 rounded-full h-12">
+
+      <div class="flex pl-4 items-center space-x-2 ">
+        <div>
+          <div onclick="setDark('dark')" class="moon text-white hover:text-blue-500 dark:hover:text-[#38BDF8]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3}
+              stroke="currentColor" class="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+          </div>
+          <div onclick="setDark('light')" class="sun hidden text-white hover:text-blue-500 dark:hover:text-[#38BDF8]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+          </div>
+        </div>
+        <div class="text-white hover:text-blue-500 dark:hover:text-[#38BDF8]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor"
+            class="w-4 h-4">
+            <path strokeLinecap="round" strokeLinejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="flex items-center space-x-3 group bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-purple-500  pl-10 pr-2 py-1 rounded-full text-white  ">
+        <div class="transform ease-in-out duration-300 mr-12">
+          DR_SERVE
+        </div>
+      </div>
+    </div>
+    <div onclick="openNav()"
+      class="-right-6 transition transform ease-in-out duration-500 flex border-4 border-white dark:border-[#0F172A] bg-[#1E293B] dark:hover:bg-blue-500 hover:bg-purple-500 absolute top-2 p-3 rounded-full text-white hover:rotate-45">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+      </svg>
+    </div>
+    <!-- MAX SIDEBAR-->
+
+    <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)]">
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+          class="w-4 h-4">
+          <path strokeLinecap="round" strokeLinejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Dashboard</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Graph Analysis</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+        <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Graph Analysis</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
 
     </div>
 
-    <script>
-        // Toggle buttons for sidebars
-        const leftSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar1"]');
-        const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
+    <!-- close -->
+      <!-- start -->
 
-        leftSidebarToggle.addEventListener('click', function () {
-            const sidebar = document.getElementById('logo-sidebar1');
-            sidebar.classList.toggle('-translate-x-full');
-        });
-
-        rightSidebarToggle.addEventListener('click', function () {
-            const sidebar = document.getElementById('logo-sidebar2');
-            sidebar.classList.toggle('translate-x-full');
-        });
-    </script>
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
 
 
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Graph Analysis</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+        <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Graph Analysis</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+
+    </div>
+    <!-- MINI SIDEBAR-->
+    <div class="mini mt-20 flex flex-col space-y-2 w-full h-[calc(100vh)]">
+      <div
+        class="hover:ml-4 justify-end pr-5 text-white hover:text-purple-500 dark:hover:text-blue-500 w-full bg-[#1E293B] p-3 rounded-full transform ease-in-out duration-300 flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+          class="w-4 h-4">
+          <path strokeLinecap="round" strokeLinejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+      </div>
+      <div
+        class="hover:ml-4 justify-end pr-5 text-white hover:text-purple-500 dark:hover:text-blue-500 w-full bg-[#1E293B] p-3 rounded-full transform ease-in-out duration-300 flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+      </div>
+      <div
+        class="hover:ml-4 justify-end pr-5 text-white hover:text-purple-500 dark:hover:text-blue-500 w-full bg-[#1E293B] p-3 rounded-full transform ease-in-out duration-300 flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+      </div>
+    </div>
+
+  </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- CONTENT -->
+  <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
+    <nav class="flex px-5 py-3 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="#"
+            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+              </path>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clipRule="evenodd"></path>
+            </svg>
+            <a href="#"
+              class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Templates</a>
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <!-- dashboard main start -->
+    <div class="p-4 sm:ml-64 hidden" id="Dashboard_content">
+      <div class="p-4  rounded-lg  mt-14">
+        i am dashboard {current analysis}
+        its showing current occuring entities like patient joins today,staff joins today ,doctor joins today,doctor
+        works today,
+        doctor not present today,total patient no successful his disease,hospital rating of hospital given by patients
+      </div>
+    </div>
+    <!-- close -->
+    <!-- <div class="flex flex-wrap my-5 -mx-2">
+
+      <div class="w-full lg:w-1/3 p-2">
+        <div
+          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+          <div
+            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="object-scale-down transition duration-500">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+            <div class="text-xs whitespace-nowrap">
+              Total User
+            </div>
+            <div class="">
+              100
+            </div>
+          </div>
+          <div class=" flex items-center flex-none text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 p-2 ">
+        <div
+          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+          <div
+            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="object-scale-down transition duration-500 ">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+            <div class="text-xs whitespace-nowrap">
+              Total Product
+            </div>
+            <div class="">
+              500
+            </div>
+          </div>
+          <div class=" flex items-center flex-none text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+        <div
+          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+          <div
+            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="object-scale-down transition duration-500">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+            <div class="text-xs whitespace-nowrap">
+              Total Visitor
+            </div>
+            <div class="">
+              500
+            </div>
+          </div>
+          <div class=" flex items-center flex-none text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+              stroke="currentColor" class="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+      <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+    </div>
+    <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+      <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+    </div>
+    <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+      role="alert">
+      <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+    </div> -->
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="logo-sidebar2"
+    class="overflow-auto scroll-smooth no-scrollbar fixed top-16 right-0 z-40 w-64 h-screen pt-34  border-l bg-[#1E293B] transition-transform translate-x-full ">
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+          class="w-4 h-4">
+          <path strokeLinecap="round" strokeLinejoin="round"
+            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Manage User role</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+           <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Patient Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+         <!-- start -->
+
+         <div
+         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="w-4 h-4">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+         </svg>
+         <div>
+ 
+ 
+           <ul class="space-y-2 font-medium">
+             <li>
+               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                 class="flex items-center">
+ 
+                 <span class="ms-3">Room & Bed Management</span>
+               </a>
+             </li>
+           </ul>
+ 
+         </div>
+ 
+ 
+       </div>
+ 
+       <!-- close -->
+            <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Doctor  Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+         <!-- start -->
+
+         <div
+         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="w-4 h-4">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+         </svg>
+         <div>
+ 
+ 
+           <ul class="space-y-2 font-medium">
+             <li>
+               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                 class="flex items-center">
+ 
+                 <span class="ms-3">Staff Management</span>
+               </a>
+             </li>
+           </ul>
+ 
+         </div>
+ 
+ 
+       </div>
+ 
+       <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Inventory Management</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+        <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3"> Emergency Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Service Management</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+        <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Insurance Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+    <!-- start -->
+
+    <div
+    class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-4 h-4">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+    </svg>
+    <div>
+
+
+      <ul class="space-y-2 font-medium">
+        <li>
+          <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+            class="flex items-center">
+
+            <span class="ms-3">Report and Analytics Management</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+  <!-- close -->
+       <!-- start -->
+
+       <div
+       class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+         class="w-4 h-4">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+       </svg>
+       <div>
+
+
+         <ul class="space-y-2 font-medium">
+           <li>
+             <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+               class="flex items-center">
+
+               <span class="ms-3">Department Management</span>
+             </a>
+           </li>
+         </ul>
+
+       </div>
+
+
+     </div>
+
+     <!-- close -->
+          <!-- start -->
+
+          <div
+          class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg>
+          <div>
+  
+  
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                  class="flex items-center">
+  
+                  <span class="ms-3">Service Management</span>
+                </a>
+              </li>
+            </ul>
+  
+          </div>
+  
+  
+        </div>
+  
+        <!-- close -->
+             <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Service Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+         <!-- start -->
+
+         <div
+         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="w-4 h-4">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+         </svg>
+         <div>
+ 
+ 
+           <ul class="space-y-2 font-medium">
+             <li>
+               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                 class="flex items-center">
+ 
+                 <span class="ms-3">Service Management</span>
+               </a>
+             </li>
+           </ul>
+ 
+         </div>
+ 
+ 
+       </div>
+ 
+       <!-- close -->
+            <!-- start -->
+
+      <div
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
+
+
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+              class="flex items-center">
+
+              <span class="ms-3">Service Management</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+    <!-- close -->
+         <!-- start -->
+
+         <div
+         class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="w-4 h-4">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+         </svg>
+         <div>
+ 
+ 
+           <ul class="space-y-2 font-medium">
+             <li>
+               <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                 class="flex items-center">
+ 
+                 <span class="ms-3">Service Management</span>
+               </a>
+             </li>
+           </ul>
+ 
+         </div>
+ 
+ 
+       </div>
+ 
+       <!-- close -->
+
+  </aside>
+
+
+  <script>
+    const sidebar = document.querySelector("aside");
+    const maxSidebar = document.querySelector(".max")
+    const miniSidebar = document.querySelector(".mini")
+    const roundout = document.querySelector(".roundout")
+    const maxToolbar = document.querySelector(".max-toolbar")
+    const logo = document.querySelector('.logo')
+    const content = document.querySelector('.content')
+    const moon = document.querySelector(".moon")
+    const sun = document.querySelector(".sun")
+
+    function setDark(val) {
+
+      if (val === "dark") {
+        document.documentElement.classList.add('dark')
+        moon.classList.add("hidden")
+        sun.classList.remove("hidden")
+      } else {
+        document.documentElement.classList.remove('dark')
+        sun.classList.add("hidden")
+        moon.classList.remove("hidden")
+      }
+    }
+
+    function openNav() {
+      if (sidebar.classList.contains('-translate-x-48')) {
+        // max sidebar 
+        sidebar.classList.remove("-translate-x-48")
+        sidebar.classList.add("translate-x-none")
+        maxSidebar.classList.remove("hidden")
+        maxSidebar.classList.add("flex")
+        miniSidebar.classList.remove("flex")
+        miniSidebar.classList.add("hidden")
+        maxToolbar.classList.add("translate-x-0")
+        maxToolbar.classList.remove("translate-x-24", "scale-x-0")
+        logo.classList.remove("ml-12")
+        content.classList.remove("ml-12")
+        content.classList.add("ml-12", "md:ml-60")
+      } else {
+        // mini sidebar
+        sidebar.classList.add("-translate-x-48")
+        sidebar.classList.remove("translate-x-none")
+        maxSidebar.classList.add("hidden")
+        maxSidebar.classList.remove("flex")
+        miniSidebar.classList.add("flex")
+        miniSidebar.classList.remove("hidden")
+        maxToolbar.classList.add("translate-x-24", "scale-x-0")
+        maxToolbar.classList.remove("translate-x-0")
+        logo.classList.add('ml-12')
+        content.classList.remove("ml-12", "md:ml-60")
+        content.classList.add("ml-12")
+
+      }
+
+    }
+
+
+    // Toggle Profile Dropdown
+    function toggleDropdown() {
+      document.getElementById('dropdown').classList.toggle('hidden');
+    }
+
+  </script>
+
+  <script>
+    // Toggle buttons for sidebars
+    const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
+
+
+    rightSidebarToggle.addEventListener('click', function () {
+      const sidebar = document.getElementById('logo-sidebar2');
+      sidebar.classList.toggle('translate-x-full');
+    });
+  </script>
+
+  <script>
+
+
+
+
+    // Enable the other tabs (Dashboard & Settings)
+    let DashboardTab = document.getElementById('Dashboard-tab');
+    let AppointmentTab = document.getElementById('Appointment-tab');
+    let PaymentTab = document.getElementById('Payment-tab');
+    let RecieptTab = document.getElementById('Reciept-tab');
+    let ContactTab = document.getElementById('Contactus-tab');
+
+    let QuieueTab = document.getElementById('Quieue-tab');
+    let PastreportTab = document.getElementById('Pastreport-tab');
+    let AnalysisTab = document.getElementById('Analysis-tab');
+    let CancelAppointmentTab = document.getElementById('CancelAppointment-tab');
+
+    let Find_HospitalTab = document.getElementById('Find_Hospital-tab');
+    let AskDRAppointTab = document.getElementById('AskDRAppoint-tab');
+
+
+
+
+    // Handle tab navigation
+    document.querySelectorAll('[data-tabs-target]').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const targetTab = button.getAttribute('data-tabs-target');
+        document.querySelectorAll('[id$="_content"]').forEach(tab => tab.classList.add('hidden'));
+        document.querySelector(targetTab).classList.remove('hidden');
+      }
+      )
+    });
+
+  </script>
 </body>
 
 </html>

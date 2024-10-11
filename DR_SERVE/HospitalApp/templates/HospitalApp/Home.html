@@ -9,51 +9,81 @@
   <title>DR.SERVE</title>
   {% tailwind_css %}
 </head>
+{% load static %}
 
 <!-- component -->
 <!-- full tailwind config using javascript -->
 <!-- https://github.com/neurolinker/popice -->
 
-<body class="body bg-white dark:bg-[#0F172A]">
-  {% load static %}
+<body class="body bg-cyan-100 ">
   <div class="fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
     <div
-      class="logo sm:ml-12 ml-8 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
-    <h1 class="font-bold text-blue-600 text-xs sm:text-lg">  DR_SERVE</h1>
+      class=" logo sm:ml-12 ml-8 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
+      <h1 class="font-bold text-blue-600 text-[0px] sm:text-lg "> DR_SERVE</h1>
     </div>
     <!-- SPACER -->
     <div class="grow h-full flex items-center justify-center">
 
-      <button class="rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+      <button
+        class="rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
           class="w-4 h-4">
           <path strokeLinecap="round" strokeLinejoin="round"
             d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
         </svg>
       </button>
-      <button class="mx-5 rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+      <button
+        class="mx-2 rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="calender">
           <g transform="translate(871 -962.362)">
-            <path fill="#f05542" d="M-868 965.362h9c.554 0 1 .446 1 1v2.5h-11v-2.5c0-.554.446-1 1-1z" color="#000" overflow="visible" style="marker:none"></path>
+            <path fill="#f05542" d="M-868 965.362h9c.554 0 1 .446 1 1v2.5h-11v-2.5c0-.554.446-1 1-1z" color="#000"
+              overflow="visible" style="marker:none"></path>
             <path fill="#e9eded" d="M-869 968.362v7c0 .554.446 1 1 1h9c.554 0 1-.446 1-1v-7h-11z"></path>
-            <rect width="3" height="1" x="-867" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5" ry=".5" style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5" ry=".5" style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="969.362" fill="#cad1d8" color=...="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-867" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
-            <rect width="3" height="1" x="-867" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0" style="marker:none"></rect>
+            <rect width="3" height="1" x="-867" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
+              ry=".5" style="marker:none"></rect>
+            <rect width="3" height="1" x="-861" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
+              ry=".5" style="marker:none"></rect>
+            <rect width="3" height="1" x="-861" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-863" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-865" y="969.362" fill="#cad1d8" color=...="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-861" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-863" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-865" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-867" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-863" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-865" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
+            <rect width="3" height="1" x="-867" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
+              style="marker:none"></rect>
           </g>
         </svg>
-        
+
       </button>
-      <button class="rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-       <img src="{% static 'HospialApp/images/hospital_icon.svg' %}" alt=" ">
+      <button
+        class="rounded-md  bg-slate-800 p-2 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <svg  xmlns="{% static 'HospitalApp/images/hospital_icon.svg' %}"fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="16" height="16" id="hospitalbed" >
+          <path strokeLinecap="round" strokeLinejoin="round"
+           />
+        </svg>
+      </button>
+      <button
+        class="rounded-md mx-2 bg-slate-800 p-2 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button">
+        <svg  xmlns="{% static 'HospitalApp/images/hospital_icon.svg' %}"fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="16" height="16" id="hospitalbed" >
+          <path strokeLinecap="round" strokeLinejoin="round"
+ />
+        </svg>
       </button>
 
     </div>
@@ -85,10 +115,10 @@
 
 
 
-        
 
-        </div>  <!-- Right sidebar toggle button -->
-      
+
+        </div> <!-- Right sidebar toggle button -->
+
       </div>
       <div class="flex items-center justify-end">
 
@@ -142,7 +172,7 @@
       <div
         class="flex items-center space-x-3 group bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-purple-500  pl-10 pr-2 py-1 rounded-full text-white  ">
         <div class="transform ease-in-out duration-300 mr-12">
-          NERVE
+          DR_SERVE
         </div>
       </div>
     </div>
@@ -224,7 +254,7 @@
 
 
 
- 
+
 
 
 
@@ -388,25 +418,61 @@
 
 
   <aside id="logo-sidebar2"
-  class="overflow-auto scroll-smooth  fixed top-20 right-0 z-40 w-64 h-screen pt-34 bg-gray-800 border-l border-gray-600 transition-transform translate-x-full translate-x-0">
-  <div class="h-screen  px-3 pb-4 overflow-y-auto">
-      <ul class="space-y-2">
-          <li>
-              <a href="#" class="flex items-center p-2 text-white hover:bg-gray-700">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20"
-                      fill="currentColor">
-                      <path
-                          d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Z" />
-                  </svg>
-                  <span class="ml-3">Profile</span>
-              </a>
-          </li>
+    class="overflow-auto scroll-smooth  fixed top-16 right-0 z-40 w-64 h-screen pt-34  border-l bg-[#1E293B] transition-transform translate-x-full ">
+    <div
+      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <div>
+        Home
+      </div>
 
 
-          <!-- Add more sidebar items here -->
-      </ul>
-  </div>
-</aside>
+    </div>
+    <div
+      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <div>
+        Home
+      </div>
+
+
+    </div>
+    <div
+      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <div>
+        Home
+      </div>
+
+
+    </div>
+    <div
+      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+        class="w-4 h-4">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <div>
+        Home
+      </div>
+
+
+    </div>
+
+  </aside>
 
 
   <script>
@@ -471,17 +537,17 @@
     }
 
   </script>
- 
- <script>
-  // Toggle buttons for sidebars
-  const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
 
- 
-  rightSidebarToggle.addEventListener('click', function () {
+  <script>
+    // Toggle buttons for sidebars
+    const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
+
+
+    rightSidebarToggle.addEventListener('click', function () {
       const sidebar = document.getElementById('logo-sidebar2');
       sidebar.classList.toggle('translate-x-full');
-  });
-</script>
+    });
+  </script>
 </body>
 
 </html>
