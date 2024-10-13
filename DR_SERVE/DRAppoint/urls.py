@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .import views
+
+app_name='DRAppoint'
+
+
 urlpatterns = [
     path('', views.Home,name='Home'),
     path('Appointment/', views.Appointment,name='Appointment'),

@@ -947,14 +947,6 @@ select {
   top: 7%;
 }
 
-.-right-3 {
-  right: -0.75rem;
-}
-
-.-right-7 {
-  right: -1.75rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -977,18 +969,6 @@ select {
 
 .z-50 {
   z-index: 50;
-}
-
-.-z-40 {
-  z-index: -40;
-}
-
-.-z-50 {
-  z-index: -50;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .order-first {
@@ -1397,18 +1377,6 @@ select {
   height: 100vh;
 }
 
-.h-\[\] {
-  height: ;
-}
-
-.h-\[100\] {
-  height: 100;
-}
-
-.h-\[100vh\] {
-  height: 100vh;
-}
-
 .min-h-\[30rem\] {
   min-height: 30rem;
 }
@@ -1527,18 +1495,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[260px\] {
-  width: 260px;
-}
-
-.w-72 {
-  width: 18rem;
 }
 
 .min-w-0 {
@@ -1677,11 +1633,6 @@ select {
 
 .translate-x-full {
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-52 {
-  --tw-translate-x: -13rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2074,10 +2025,6 @@ select {
   border-width: 4px;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
 .border-x-\[3cqw\] {
   border-left-width: 3cqw;
   border-right-width: 3cqw;
@@ -2309,11 +2256,6 @@ select {
 
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05);
-}
-
-.bg-\[\#fbfcff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 252 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-l {
@@ -4321,26 +4263,6 @@ select {
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
     border-color: rgb(55 65 81 / var(--tw-border-opacity));
-  }
-
-  .dark\:border-\[\#ffffff\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  }
-
-  .dark\:border-\[\#294075\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(41 64 117 / var(--tw-border-opacity));
-  }
-
-  .dark\:border-\[\#296775\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(41 103 117 / var(--tw-border-opacity));
-  }
-
-  .dark\:border-\[\#6ae4ff\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(106 228 255 / var(--tw-border-opacity));
   }
 
   .dark\:bg-\[\#0F172A\] {

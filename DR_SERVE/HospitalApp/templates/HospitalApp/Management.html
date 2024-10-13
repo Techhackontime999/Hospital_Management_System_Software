@@ -10,11 +10,21 @@
   <title>DR.SERVE</title>
   {% tailwind_css %}
   <style>
-    html, body {
-  overflow-x: hidden;
-}
-
+    html,
+    body {
+      overflow-x: hidden;
+    }
   </style>
+  <!-- nav list start -->
+ 
+    <style>
+      .hidden {
+      cursor: pointer;
+
+          display: none;
+      }
+  </style>
+  <!-- nav list close -->
 </head>
 {% load static %}
 
@@ -48,6 +58,9 @@
           </div>
         </div>
       </button>
+
+
+
       <button
         class="mx-1 sm:mx-3 rounded-md bg-gray-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button">
@@ -277,10 +290,8 @@
     </div>
     <div onclick="openNav()"
       class="-right-6 transition transform ease-in-out duration-500 flex border-4 border-white dark:border-[#0F172A] bg-[#1E293B] dark:hover:bg-blue-500 hover:bg-purple-500 absolute top-2 p-3 rounded-full text-white hover:rotate-45">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none"     html, body {
-  overflow-x: hidden;
-}="0 0 24 24" strokeWidth={3} stroke="currentColor"
-        class="w-4 h-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" html, body { overflow-x: hidden; }="0 0 24 24" strokeWidth={3}
+        stroke="currentColor" class="w-4 h-4">
         <path strokeLinecap="round" strokeLinejoin="round"
           d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
       </svg>
@@ -289,59 +300,50 @@
 
     <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)] ">
       <!-- start -->
-
-      <div
-        class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+     
+    <!-- Button and Expandable List 1 -->
+    <div class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
           class="w-4 h-4">
           <path strokeLinecap="round" strokeLinejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <div>
-
-
-          <ul class="space-y-2 font-medium">
-            <li>
-              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                class="flex items-center">
-
-                <span class="ms-3">Dashboard</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-
-      </div>
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+          <span class="ms-3">Dashboard</span>
+      </a>
+  </div>
 
       <!-- close -->
       <!-- start -->
 
-      <div
-        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+       <!-- Button and Expandable List 1 -->
+    <div class="hover:ml-4 w-full text-white mt-4 hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
           class="w-4 h-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-        </svg>
-        <div>
+          <path strokeLinecap="round" strokeLinejoin="round"
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+      <a href="#" class="flex items-center expandButton">
+          <span class="ms-3">Graph Analysis</span>
+      </a>
+  </div>
 
+  <ul class="list hidden space-y-2 font-medium pl-10 mt-2">
+    <li class="flex items-center">
+      <svg class="w-10 h-10 mr-2 " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="0" fill="none" width="24" height="24"></rect> <g> <path d="M7 10l5 5 5-5"></path> </g> </g></svg>
+        <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">List 1</a>
+    </li>
+    <li class="flex items-center">
+      <svg class="w-10 h-10 mr-2 " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="0" fill="none" width="24" height="24"></rect> <g> <path d="M7 10l5 5 5-5"></path> </g> </g></svg>
+        <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">List 1</a>
+    </li>
+    <li class="flex items-center">
+      <svg class="w-10 h-10 mr-2 " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="0" fill="none" width="24" height="24"></rect> <g> <path d="M7 10l5 5 5-5"></path> </g> </g></svg>
+        <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">List 1</a>
+    </li>
+  </ul>
+      <!-- close -->
 
-          <ul class="space-y-2 font-medium">
-            <li>
-              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
-                class="flex items-center">
-
-                <span class="ms-3">Graph Analysis</span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
-
-
-      </div>
 
       <!-- close -->
       <!-- start -->
@@ -781,7 +783,7 @@
 
   <!-- CONTENT -->
   <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
-    
+
     <nav class="flex px-5 py-4 my-2 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-3">
         <li class="inline-flex items-center">
@@ -811,16 +813,21 @@
 
     </nav>
     <!-- search start -->
-    <form class="max-w-md mx-auto my-2">   
+    <form class="max-w-md mx-auto my-2">
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
       <div class="relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-              </svg>
-          </div>
-          <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Quick Search ..." required />
-          <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
+        </div>
+        <input type="search" id="default-search"
+          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Quick Search ..." required />
+        <button type="submit"
+          class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
       </div>
     </form>
     <!-- search close -->
@@ -829,111 +836,117 @@
       <div class="p-4  rounded-lg  mt-14">
         <div class="flex flex-wrap my-5 -mx-2">
 
-      <div class="w-full p-2">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total User
-            </div>
-            <div class="">
-              100
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
+          <div class="w-full p-2">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total User
+                </div>
+                <div class="">
+                  100
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
 
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-2 ">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500 ">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total Product
+                </div>
+                <div class="">
+                  500
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total Visitor
+                </div>
+                <div class="">
+                  500
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-2 ">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500 ">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total Product
-            </div>
-            <div class="">
-              500
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
+        <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800"
+          role="alert">
+          <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
         </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-2">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total Visitor
-            </div>
-            <div class="">
-              500
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
+        <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+          <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
         </div>
-      </div>
-    </div>
-    <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-      <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
-    </div>
-    <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-      <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
-    </div>
-    <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
-      role="alert">
-      <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
-    </div>
+        <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+          role="alert">
+          <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+        </div>
 
 
         i am dashboard {current analysis}
         its showing current occuring entities like patient joins today,staff joins today ,doctor joins today,doctor
         works today,
         doctor not present today,total patient no successful his disease,hospital rating of hospital given by patients
+     <a href="{% url 'DRAppoint:Home' %}">
+        <button type="submit" class="bg-red-600 text-white" >
+submit
+        </button>
+      </a>
       </div>
     </div>
     <!-- close -->
-    
+
 
   </div>
 
@@ -1632,33 +1645,33 @@
     </div>
 
     <!-- close -->
-         <!-- start -->
+    <!-- start -->
 
     <div
-    class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      class="w-4 h-4">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-    </svg>
-    <div>
+      class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+      </svg>
+      <div>
 
 
-      <ul class="space-y-2 font-medium">
-        <li>
-          <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2" class="flex items-center">
 
-            <span class="ms-3">Security and Maintanance</span>
-          </a>
-        </li>
-      </ul>
+              <span class="ms-3">Security and Maintanance</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
 
     </div>
 
-
-  </div>
-
-  <!-- close -->
+    <!-- close -->
 
   </aside>
 
@@ -1774,6 +1787,29 @@
     });
 
   </script>
+  <!-- expend start -->
+
+ 
+  <script>
+    // Get all buttons with class 'expandButton'
+    var buttons = document.querySelectorAll('.expandButton');
+
+    // Loop through each button and add an event listener
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Get the sibling UL (list) following the button's parent div
+            var list = button.parentElement.nextElementSibling;
+            // Toggle the hidden class to show/hide the list
+            if (list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+            } else {
+                list.classList.add('hidden');
+            }
+        });
+    });
+</script>
+  <!-- expend close -->
 </body>
 
 </html>

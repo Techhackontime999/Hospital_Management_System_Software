@@ -17,11 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .import views
-
+app_name = 'HospitalApp'  
 urlpatterns = [
     path('', views.Home,name='Home'),
     path('Management/', views.Management,name='Management'),
-    
 
 
 
