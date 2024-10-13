@@ -5,9 +5,26 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title>DR.SERVE</title>
   {% tailwind_css %}
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+  <!-- nav list start -->
+
+  <style>
+    .hidden {
+      cursor: pointer;
+
+      display: none;
+    }
+  </style>
+  <!-- nav list close -->
 </head>
 {% load static %}
 
@@ -16,77 +33,18 @@
 <!-- https://github.com/neurolinker/popice -->
 
 <body class="body bg-cyan-100 ">
-  <div class="fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
+  <div class="fixed w-full   z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
     <div
-      class=" logo sm:ml-12 ml-8 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
-      <h1 class="font-bold text-blue-600 text-[0px] sm:text-lg "> DR_SERVE</h1>
+      class=" logo  dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
+      <h1 class="font-bold  text-blue-600 text-[0px] sm:ml-12 sm:text-lg "> DR_SERVE</h1>
     </div>
     <!-- SPACER -->
-    <div class="grow h-full flex items-center justify-center">
+    <div
+      class="grow h-[200px] flex items-center justify-center overflow-x-scroll no-scrollbar  space-x-5 overflow-y-hidden   pl-44 sm:pl-auto ">
 
-      <button
-        class="rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-          class="w-4 h-4">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-      </button>
-      <button
-        class="mx-2 rounded-md bg-slate-800 p-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="calender">
-          <g transform="translate(871 -962.362)">
-            <path fill="#f05542" d="M-868 965.362h9c.554 0 1 .446 1 1v2.5h-11v-2.5c0-.554.446-1 1-1z" color="#000"
-              overflow="visible" style="marker:none"></path>
-            <path fill="#e9eded" d="M-869 968.362v7c0 .554.446 1 1 1h9c.554 0 1-.446 1-1v-7h-11z"></path>
-            <rect width="3" height="1" x="-867" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
-              ry=".5" style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="964.362" fill="#34485c" color="#000" overflow="visible" rx=".5"
-              ry=".5" style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="969.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="969.362" fill="#cad1d8" color=...="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-861" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-867" y="971.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-863" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-865" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-            <rect width="3" height="1" x="-867" y="973.362" fill="#cad1d8" color="#000" overflow="visible" ry="0"
-              style="marker:none"></rect>
-          </g>
-        </svg>
-
-      </button>
-      <button
-        class="rounded-md  bg-slate-800 p-2 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button">
-        <svg  xmlns="{% static 'HospitalApp/images/hospital_icon.svg' %}"fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="16" height="16" id="hospitalbed" >
-          <path strokeLinecap="round" strokeLinejoin="round"
-           />
-        </svg>
-      </button>
-      <button
-        class="rounded-md mx-2 bg-slate-800 p-2 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button">
-        <svg  xmlns="{% static 'HospitalApp/images/hospital_icon.svg' %}"fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="16" height="16" id="hospitalbed" >
-          <path strokeLinecap="round" strokeLinejoin="round"
- />
-        </svg>
-      </button>
-
+ <!-- add navlink here -->
     </div>
+    <!-- spacer close -->
     <div class="flex-none h-full text-center flex items-center justify-center">
 
 
@@ -100,7 +58,7 @@
                   alt="profile" class="shadow rounded-full object-cover" />
               </div>
             </div>
-            <div class="hidden md:block text-sm md:text-md text-black dark:text-white">John Doe</div>
+            <div class="hidden md:block text-sm md:text-md text-black dark:text-white">P.M.C.H Patna</div>
           </div>
 
           <!-- Profile Dropdown -->
@@ -117,29 +75,15 @@
 
 
 
-        </div> <!-- Right sidebar toggle button -->
+        </div>
 
       </div>
-      <div class="flex items-center justify-end">
 
-        <button data-drawer-target="logo-sidebar2" data-drawer-toggle="logo-sidebar2" aria-controls="logo-sidebar2"
-          type="button"
-          class=" items-center p-1 text-sm text-gray-500 rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-          <span class="sr-only">Open left sidebar</span>
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-            <path clip-rule="evenodd" fill-rule="evenodd"
-              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-            </path>
-          </svg>
-        </button>
-
-
-      </div>
 
     </div>
   </div>
   <aside
-    class="w-60 -translate-x-48 fixed transition transform ease-in-out duration-1000 z-50 flex h-screen bg-[#1E293B] ">
+    class=" scroll-smooth no-scrollbar w-60 -translate-x-48 fixed transition transform ease-in-out duration-1000 z-50 flex h-screen bg-[#1E293B] ">
     <!-- open sidebar button -->
     <div
       class="max-toolbar translate-x-24 scale-x-0 w-full -right-6 transition transform ease-in duration-300 flex items-center justify-between border-4 border-white dark:border-[#0F172A] bg-[#1E293B]  absolute top-2 rounded-full h-12">
@@ -178,50 +122,227 @@
     </div>
     <div onclick="openNav()"
       class="-right-6 transition transform ease-in-out duration-500 flex border-4 border-white dark:border-[#0F172A] bg-[#1E293B] dark:hover:bg-blue-500 hover:bg-purple-500 absolute top-2 p-3 rounded-full text-white hover:rotate-45">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor"
-        class="w-4 h-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" html, body { overflow-x: hidden; }="0 0 24 24" strokeWidth={3}
+        stroke="currentColor" class="w-4 h-4">
         <path strokeLinecap="round" strokeLinejoin="round"
           d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
       </svg>
     </div>
     <!-- MAX SIDEBAR-->
-    <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)]">
+
+    <div class="max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)] ">
+   
+
+
+     
+    
+
+
       <div
-        class="hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-          class="w-4 h-4">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <div>
-          Home
-        </div>
-      </div>
-      <div
-        class="hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-4 h-4">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
-        <div>
-          Table
-        </div>
-      </div>
-      <div
-        class="hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
         </svg>
         <div>
-          Graph
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Nutrition and Dietary Services
+
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
         </div>
+
+
       </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Rehabilitation and Physiotherapy Services</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Preventive and Wellness Services </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Day Care Services
+
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Home Care Services
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3"> Specialized Clinics and Centers
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+      <!-- start -->
+
+      <div
+        class="hover:ml-4 w-full mt-4 text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+        </svg>
+        <div>
+
+
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a href="#" id="Dashboard-tab" data-tabs-target="#Dashboard_content" role="tab2"
+                class="flex items-center">
+
+                <span class="ms-3">Nutrition and Dietary Services</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+      <!-- close -->
+
     </div>
     <!-- MINI SIDEBAR-->
-    <div class="mini mt-20 flex flex-col space-y-2 w-full h-[calc(100vh)]">
+    <div class="mini  mt-20 flex flex-col space-y-2 w-full h-[calc(100vh)]">
       <div
         class="hover:ml-4 justify-end pr-5 text-white hover:text-purple-500 dark:hover:text-blue-500 w-full bg-[#1E293B] p-3 rounded-full transform ease-in-out duration-300 flex">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
@@ -277,129 +398,230 @@
 
   <!-- CONTENT -->
   <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
-    <nav class="flex px-5 py-3 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
-      <ol class="inline-flex items-center space-x-1 md:space-x-3">
-        <li class="inline-flex items-center">
-          <a href="#"
-            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
-              </path>
-            </svg>
-            Home
-          </a>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"></path>
-            </svg>
-            <a href="#"
-              class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Templates</a>
-          </div>
-        </li>
-      </ol>
-    </nav>
-    <div class="flex flex-wrap my-5 -mx-2">
-      <div class="w-full lg:w-1/3 p-2">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total User
-            </div>
-            <div class="">
-              100
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
 
+    <!-- search start -->
+    <form class="max-w-md mx-auto my-2">
+      <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
+        </div>
+        <input type="search" id="default-search"
+          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Quick Search ..." required />
+        <button type="submit"
+          class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+      </div>
+    </form>
+    <!-- search close -->
+    <footer class="py-12 bg-gray-50 xl:pt-24 dark:bg-gray-800">
+      <div class="w-full px-4 mx-auto max-w-8xl">
+          <div class="grid gap-12 xl:grid-cols-6 xl:gap-24">
+              <div class="col-span-2">
+                  <a href="https://flowbite.com/" class="flex mb-5">
+                      <img src="/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
+                      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                  </a>
+                  <p class="max-w-lg mb-3 text-gray-600 dark:text-gray-400">Flowbite is a library of interactive UI components built with Tailwind CSS that can get you started building websites faster and more efficiently.</p>
+                  <p class="max-w-lg text-gray-600 dark:text-gray-400">Code licensed <a href="https://github.com/themesberg/flowbite/blob/main/LICENSE.md" class="text-blue-600 dark:text-blue-500 hover:underline" rel="nofollow">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" class="text-blue-600 hover:underline dark:text-blue-500" rel="nofollow">CC BY 3.0</a>.</p>
+              </div>
+              <div>
+                  <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Resources</h3>
+                  <ul>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Documentation</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/blocks/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite Blocks</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/figma/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Figma Design</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/icons/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite Icons</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Flowbite GPT</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/pro/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Pro version</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Help and support</h3>
+                  <ul>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/contact/" rel="noreferrer nofollow" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Contact us</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite/discussions" rel="noreferrer nofollow" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github discussions</a>
+                      </li>
+                      <li class="mb-4 flex items-center">
+                          <a href="https://flowbite.com/work-with-us/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Hire us </a>
+                          <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-2">
+                          New
+                          </span>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Follow us</h3>
+                  <ul>
+                      <li class="mb-4">
+                          <a href="https://discord.gg/4eeurUVvTy" rel="noreferrer nofollow" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Discord</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Github</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://twitter.com/zoltanszogyenyi" rel="noreferrer nofollow" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Twitter/X</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://www.linkedin.com/in/zoltanszogyenyi/" rel="noreferrer nofollow" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">LinkedIn</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">Legal</h3>
+                  <ul>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/license/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">License (EULA)</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/privacy-policy/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Privacy Policy</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/terms-and-conditions/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Terms &amp; Conditions</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://flowbite.com/brand/" class="font-medium text-gray-600 dark:text-gray-400 dark:hover:text-white hover:underline">Brand guideline</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <hr class="my-8 border-gray-200 dark:border-gray-700 lg:my-12">
+          <span class="block text-center text-gray-600 dark:text-gray-400 font-">© 2019-<span id="currentYear">2024</span> <a href="https://flowbite.com/">Flowbite™</a> is a registered trademark. All Rights Reserved.
+          </span>
+      </div>
+  </footer>
+    <!-- dashboard main start -->
+    <div class="p-4 hidden" id="Dashboard_content">
+      <div class="p-4  rounded-lg  mt-14">
+        <div class="flex flex-wrap my-5 -mx-2">
+
+          <div class="w-full p-2">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total User
+                </div>
+                <div class="">
+                  100
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-2 ">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500 ">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total Product
+                </div>
+                <div class="">
+                  500
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+            <div
+              class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
+              <div
+                class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="object-scale-down transition duration-500">
+                  <path strokeLinecap="round" strokeLinejoin="round"
+                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                </svg>
+              </div>
+              <div class="flex flex-col justify-around flex-grow ml-5 text-white">
+                <div class="text-xs whitespace-nowrap">
+                  Total Visitor
+                </div>
+                <div class="">
+                  500
+                </div>
+              </div>
+              <div class=" flex items-center flex-none text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                  stroke="currentColor" class="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-2 ">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500 ">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total Product
-            </div>
-            <div class="">
-              500
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
+        <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800"
+          role="alert">
+          <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
         </div>
-      </div>
-      <div class="w-full md:w-1/2 lg:w-1/3 p-2">
-        <div
-          class="flex items-center flex-row w-full bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500 rounded-md p-3">
-          <div
-            class="flex text-indigo-500 dark:text-white items-center bg-white dark:bg-[#0F172A] p-2 rounded-md flex-none w-8 h-8 md:w-12 md:h-12 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="object-scale-down transition duration-500">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
-            </svg>
-          </div>
-          <div class="flex flex-col justify-around flex-grow ml-5 text-white">
-            <div class="text-xs whitespace-nowrap">
-              Total Visitor
-            </div>
-            <div class="">
-              500
-            </div>
-          </div>
-          <div class=" flex items-center flex-none text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-              stroke="currentColor" class="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
+        <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+          <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
         </div>
+        <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+          role="alert">
+          <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+        </div>
+
+
+        i am dashboard {current analysis}
+        its showing current occuring entities like patient joins today,staff joins today ,doctor joins today,doctor
+        works today,
+        doctor not present today,total patient no successful his disease,hospital rating of hospital given by patients
+     
       </div>
     </div>
-    <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-      <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
-    </div>
-    <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
-      <span class="font-medium">Danger alert!</span> Change a few things up and try submitting again.
-    </div>
-    <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
-      role="alert">
-      <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
-    </div>
+    <!-- close -->
+
+
   </div>
 
 
@@ -417,62 +639,6 @@
 
 
 
-  <aside id="logo-sidebar2"
-    class="overflow-auto scroll-smooth  fixed top-16 right-0 z-40 w-64 h-screen pt-34  border-l bg-[#1E293B] transition-transform translate-x-full ">
-    <div
-      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-        class="w-4 h-4">
-        <path strokeLinecap="round" strokeLinejoin="round"
-          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-      </svg>
-      <div>
-        Home
-      </div>
-
-
-    </div>
-    <div
-      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-        class="w-4 h-4">
-        <path strokeLinecap="round" strokeLinejoin="round"
-          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-      </svg>
-      <div>
-        Home
-      </div>
-
-
-    </div>
-    <div
-      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-        class="w-4 h-4">
-        <path strokeLinecap="round" strokeLinejoin="round"
-          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-      </svg>
-      <div>
-        Home
-      </div>
-
-
-    </div>
-    <div
-      class="hover:ml-4 mt-3 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-        class="w-4 h-4">
-        <path strokeLinecap="round" strokeLinejoin="round"
-          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-      </svg>
-      <div>
-        Home
-      </div>
-
-
-    </div>
-
-  </aside>
 
 
   <script>
@@ -487,6 +653,7 @@
     const sun = document.querySelector(".sun")
 
     function setDark(val) {
+
       if (val === "dark") {
         document.documentElement.classList.add('dark')
         moon.classList.add("hidden")
@@ -538,16 +705,45 @@
 
   </script>
 
+
+
   <script>
-    // Toggle buttons for sidebars
-    const rightSidebarToggle = document.querySelector('[data-drawer-toggle="logo-sidebar2"]');
 
 
-    rightSidebarToggle.addEventListener('click', function () {
-      const sidebar = document.getElementById('logo-sidebar2');
-      sidebar.classList.toggle('translate-x-full');
+
+
+    // Enable the other tabs (Dashboard & Settings)
+    let DashboardTab = document.getElementById('Dashboard-tab');
+    let AppointmentTab = document.getElementById('Appointment-tab');
+    let PaymentTab = document.getElementById('Payment-tab');
+    let RecieptTab = document.getElementById('Reciept-tab');
+    let ContactTab = document.getElementById('Contactus-tab');
+
+    let QuieueTab = document.getElementById('Quieue-tab');
+    let PastreportTab = document.getElementById('Pastreport-tab');
+    let AnalysisTab = document.getElementById('Analysis-tab');
+    let CancelAppointmentTab = document.getElementById('CancelAppointment-tab');
+
+    let Find_HospitalTab = document.getElementById('Find_Hospital-tab');
+    let AskDRAppointTab = document.getElementById('AskDRAppoint-tab');
+
+
+
+
+    // Handle tab navigation
+    document.querySelectorAll('[data-tabs-target]').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const targetTab = button.getAttribute('data-tabs-target');
+        document.querySelectorAll('[id$="_content"]').forEach(tab => tab.classList.add('hidden'));
+        document.querySelector(targetTab).classList.remove('hidden');
+      }
+      )
     });
+
   </script>
+
 </body>
 
 </html>
