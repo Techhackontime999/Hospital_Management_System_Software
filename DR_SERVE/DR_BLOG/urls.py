@@ -23,6 +23,8 @@ urlpatterns = [
     path('', views.Home,name='Home'),
 
 
+
+
     
 
 ]

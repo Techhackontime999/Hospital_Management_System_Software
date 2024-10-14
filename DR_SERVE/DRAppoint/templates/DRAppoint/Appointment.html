@@ -836,6 +836,7 @@
  <div class="p-4 sm:ml-64 hidden" id="CancelAppointment_content">
     <div class="p-4  rounded-lg  mt-14">
         i am  cancel appointment
+      
     </div>
 </div>
    <!-- cancel appointment main close -->
@@ -843,7 +844,13 @@
 
     <div class="p-4 sm:ml-64 hidden" id="AskDRAppoint_content">
         <div class="p-4  rounded-lg  mt-14">
-            i am   ask page
+            <div class="relative w-full h-0 pb-[56.25%] overflow-hidden">
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                        src="{% url 'DR_BLOG:Home' %}" 
+                        frameborder="0" allowfullscreen>
+                </iframe>
+              </div>
+              
         </div>
     </div>
        <!-- ask dr appoint blog page close-->
