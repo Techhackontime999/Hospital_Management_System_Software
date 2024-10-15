@@ -54,7 +54,7 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-NPM_BIN_PATH ="/home/programmermramit/.nvm/versions/node/v20.18.0/bin/npm"
+NPM_BIN_PATH ="/usr/bin/npm"
 
 MIDDLEWARE = [
 

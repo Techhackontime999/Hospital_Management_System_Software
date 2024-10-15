@@ -106,7 +106,7 @@
               <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
                 alt="Your Company">
             </div>
-            <div class="hidden sm:ml-6 sm:block" >
+            <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="{% url 'Home' %}" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
@@ -116,7 +116,7 @@
                 <div class="relative">
                   <a href="{% url 'About' %}" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
                     class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">About</a>
-                
+
                 </div>
 
                 <!-- 2 -->
@@ -288,7 +288,7 @@
           <div class="relative">
             <a href="{% url 'About' %}" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
               class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-            
+
           </div>
 
 
@@ -469,19 +469,25 @@
             <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a href="{% static 'DR_SERVE/images/doctor_with_drserve.mp4' %}">
                 <button type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Watch Video
-                  </button></a>
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Watch
+                  Video
+                </button></a>
               <a href="{% url 'Learn_more' %}" class="text-sm font-semibold leading-6 text-white">Learn more <span
                   aria-hidden="true">→</span></a>
             </div>
           </div>
-          <div class="relative  mt-8 sm:w-[100%] min-w-max h-70">
-            <img class=" w-[100%]  h-70 z-50 align-middle  rounded-md bg-white/5 ring-1 ring-white/10 group"
-              src="{% static 'DR_SERVE/images/desktop_frame.jpg' %}"
-              alt="App screenshot"  >
-            
-             
+          <div class="relative py-4 sm:w-full min-w-max justify-center mr-4">
+            <img class=" w-[90%] h-[80%] justify-center z-30 align-middle rounded"
+              src="{% static 'DR_SERVE/images/desktop_frame.jpg' %}" alt="TV Frame">
+            <div class="absolute inset-0 flex justify-center items-center">
+              <video autoplay loop muted class="absolute  rounded-md cover sm:w-[40%] sm:top-[25%] sm:left-[15%]">
+                <source src="{% static 'DR_SERVE/images/doctor_with_drserve.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -1249,7 +1255,7 @@
     <!-- feature section close -->
 
 
-    
+
 
 
     <!--not auto scrolling card start -->
