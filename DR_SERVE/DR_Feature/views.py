@@ -3,5 +3,6 @@ from django.http import HttpResponse
 # Create your views here.
 def Home(request):
     # return HttpResponse("hello hospital home")
-    return render(request,'DRAppoint/Home.html')
-    
+    return render(request,'/Home.html')
+def About(request):
+    return render(request,'DR_Feature/About.html')   

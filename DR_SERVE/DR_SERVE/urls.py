@@ -23,9 +23,16 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home,name='Home'),
-    path('Register/', views.Register,name='Register'),
-    path('SignIn/', views.SignIn,name='SignIn'),
-    path('ForgotPassword/', views.ForgotPassword,name='ForgotPassword'),
+    path('About/', views.About,name='About'),
+    path('Pricing/', views.Pricing,name='Pricing'),
+    path('Contactus/', views.Contactus,name='Contactus'),
+    path('Whats_new/', views.Whats_new,name='Whats_new'),
+    path('Learn_more/', views.Learn_more,name='Learn_more'),
+
+
+
+
+  
 
 
 
@@ -38,6 +45,7 @@ urlpatterns = [
      path("DR_BLOG/", include("DR_BLOG.urls",namespace="DR_BLOG")),
      path("DR_Feature/", include("DR_Feature.urls",namespace="DR_Feature")),
      path("DRAppoint/", include("DRAppoint.urls",namespace="DRAppoint")),
+
 
 
 

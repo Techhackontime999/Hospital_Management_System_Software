@@ -5,15 +5,21 @@ def Home(request):
     # return HttpResponse("hello home")
     return render(request,'DR_SERVE/Home.html')
 
+def About(request):
+    return render(request,'DR_SERVE/About.html')
 
-def Register(request):
-    return render(request,'DR_SERVE/Register.html')
-    # return HttpResponse("hello Register")
+def Pricing(request):
+    return render(request,'DR_SERVE/Pricing.html')
 
-def SignIn(request):
-    return render(request,'DR_SERVE/Signin.html')
+def Contactus(request):
+    return render(request,'DR_SERVE/Contactus.html')
 
-def ForgotPassword(request):  
-    return render(request,'DR_SERVE/Forgot_Password.html')
+def Whats_new(request):
+    return render(request,"DR_SERVE/What's_new.html")
+
+
+def Learn_more(request):
+    return render(request,"DR_SERVE/Learn_more.html")
+
 
 

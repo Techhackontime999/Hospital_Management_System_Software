@@ -20,6 +20,7 @@ from .import views
 app_name="DR_Feature"
 urlpatterns = [
     path('', views.Home,name='Home'),
+    path('About/', views.About,name='About'),
 
     
 

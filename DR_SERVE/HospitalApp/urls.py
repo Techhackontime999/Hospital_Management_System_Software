@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.Home,name='Home'),
     path('Management/', views.Management,name='Management'),
 
+    path('About/', views.About,name='About'),
 
 
 
