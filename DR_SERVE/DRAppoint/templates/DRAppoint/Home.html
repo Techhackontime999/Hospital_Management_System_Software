@@ -14,6 +14,12 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     {% tailwind_css %}
     <style>
+        html,
+        body {
+          overflow-x: hidden;
+        }
+      </style>
+    <style>
         /* Simple animation for the text */
         @keyframes fadeIn {
             from {
@@ -100,7 +106,7 @@
                     style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
                 </div>
             </div>
-            <div class="flex flex-wrap items-center  gap-y-2">
+            <div class="flex flex-wrap items-center  gap-y-2 mx-4" >
                 <p class="text-sm leading-6 text-gray-900">
                     <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2"
                         class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
@@ -132,7 +138,7 @@
                         <button type="button"
                             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                             aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="absolute -inset-0.5"></span>
+                            <span clahttp://127.0.0.1:8000/DRAppoint/ss="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
                             <!--
               Icon when menu is closed.
@@ -164,15 +170,19 @@
 
 
 
-                        <div class="flex flex-shrink-0 items-center">
-                            <img class="h-8 w-auto mr-20"
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                        <div class="flex flex-shrink-0 items-center ">
+                            <img class="h-11 w-11 rounded-full  mr-4 shadow-sm shadow-emerald-400"
+                                src="{% static '/DRAppoint/images/DR_Appoint_logo.jpg' %}"
                                 alt="Your Company">
+                                <span
+                                class="self-center text-xl font-semibold sm:text-xl whitespace-nowrap dark:text-blue-700">DRAppoint </span>
 
 
                         </div>
+
                         <div class="hidden sm:ml-6 sm:block">
-                            <div class="flex space-x-4">
+                            
+                            <div class="flex space-x-4 mt-1">
 
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="#"
