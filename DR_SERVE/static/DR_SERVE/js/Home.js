@@ -197,3 +197,100 @@ function onToggleMenu(e) {
     navLinks.classList.toggle('top-[7%]')
 }
 // some unknown js code in home close 2
+
+
+
+
+
+
+
+
+
+
+
+// js for hero images start
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('[data-carousel-item]');
+    const indicators = document.querySelectorAll('[data-carousel-slide-to]');
+    const prevButton = document.querySelector('[data-carousel-prev]');
+    const nextButton = document.querySelector('[data-carousel-next]');
+
+    let currentIndex = 0;
+    const autoScrollInterval = 3000; // Change slide every 3 seconds
+    let autoScroll;
+
+    const showSlide = (index) => {
+        items.forEach((item, i) => {
+            item.classList.toggle('hidden', i !== index);
+            indicators[i].setAttribute('aria-current', i === index);
+        });
+    };
+
+    const goToSlide = (index) => {
+        currentIndex = (index + items.length) % items.length;
+        showSlide(currentIndex);
+    };
+
+    const startAutoScroll = () => {
+        autoScroll = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, autoScrollInterval);
+    };
+
+    const stopAutoScroll = () => {
+        clearInterval(autoScroll);
+    };
+
+    nextButton.addEventListener('click', () => {
+        stopAutoScroll();
+        goToSlide(currentIndex + 1);
+        startAutoScroll();
+    });
+
+    prevButton.addEventListener('click', () => {
+        stopAutoScroll();
+        goToSlide(currentIndex - 1);
+        startAutoScroll();
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            stopAutoScroll();
+            goToSlide(index);
+            startAutoScroll();
+        });
+    });
+
+    // Show the first slide on initial load
+    showSlide(currentIndex);
+    startAutoScroll(); // Start auto-scrolling
+});
+
+// js for hero images close
+
+
+
+// rating js start
+// Repeat for other ratings
+
+
+    // Example JavaScript to dynamically update the rating bars and percentages
+    function updateRating(ratingType, percentage) {
+        const ratingBar = document.getElementById(ratingType);
+        const ratingPercentageText = document.getElementById(`${ratingType}-percentage`);
+        
+        // Update the width of the rating bar and the percentage text
+        ratingBar.style.width = `${percentage}%`;
+        ratingPercentageText.textContent = `${percentage}%`;
+    }
+
+    // Example of dynamically updating the rating bars
+    document.addEventListener('DOMContentLoaded', () => {
+        // Simulate dynamic update (e.g., fetching data from API)
+        setTimeout(() => {
+            updateRating('five-star', 75);  // Update 5-star rating to 75%
+            updateRating('four-star', 15);  // Update 4-star rating to 15%
+            // Add other updates as necessary
+        }, 1000);  // Simulating delay
+    });
+// rating js close
