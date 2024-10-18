@@ -113,7 +113,7 @@
                         <circle cx="1" cy="1" r="1" />
                     </svg>Join us in Denver from June 7 – 9 to see what’s coming next.
                 </p>
-                <a href="#"
+                <a href="{% url 'DRAppoint:SignUp' %}"
                     class="rotate-button flex-none rounded-full bg-black px-7 py-4 mx-4 text-sm font-semibold text-white shadow-sm hover:bg-sky-400  hover:border-slate-950 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-200">
                     Sign Up now <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -138,7 +138,6 @@
                         <button type="button"
                             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                             aria-controls="mobile-menu" aria-expanded="false">
-                            <span clahttp://127.0.0.1:8000/DRAppoint/ss="absolute -inset-0.5"></span>
                             <span class="sr-only">Open main menu</span>
                             <!--
               Icon when menu is closed.
@@ -185,7 +184,7 @@
                             <div class="flex space-x-4 mt-1">
 
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="#"
+                                <a href="{% url 'DRAppoint:Home' %}"
                                     class="rounded-md bg-gray-900 sm:px-4 px-2 py-2 text-sm font-medium text-white"
                                     aria-current="page">Dashboard </a>
 
@@ -193,7 +192,7 @@
 
                                 <!-- 1 -->
                                 <div class="relative">
-                                    <a href="#" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
+                                    <a href="{% url 'DRAppoint:About' %}" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
                                         class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">About</a>
 
                                 </div>
@@ -208,35 +207,32 @@
                                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                             aria-labelledby="dropdownDividerButton2">
 
+                                        
                                             <li>
-                                                <a href="#"
+                                                <a href="{% url 'MediJeevan:About'}"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
                                             </li>
                                             <li>
-                                                <a href="#"
+                                                <a href="{% url 'DR_BLOG:About' %}"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
                                             </li>
                                             <li>
-                                                <a href="#"
+                                                <a href="{% url 'DR_Feature:About' %}"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
                                             </li>
 
-                                            <li>
-                                                <a href="#"
-                                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
-                                            </li>
                                         </ul>
                                         <div class="py-2">
                                             <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
-                                            <a href="#"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
-                                            </a>
-                                            <a href="#"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
-                                            </a>
-                                            <a href="#"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
-                                            </a>
+                                            <a href="{% url 'MediJeevan:Home' %}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
+                                        </a>
+                                        <a href="{% url 'DR_Feature:Home' %}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
+                                        </a>
+                                        <a href="{% url 'DR_BLOG:Home' %}"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
+                                        </a>
 
                                         </div>
                                     </div>
@@ -287,13 +283,13 @@
 
 
                                 <div class="relative">
-                                    <a href="#"
+                                    <a href="{% url 'DRAppoint:Whats_new' %}"
                                         class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 sm:px-2 py-2.5 text-center inline-flex items-center">What's
                                         new
                                     </a>
                                 </div>
                                 <div class="relative">
-                                    <a href="#"
+                                    <a href="{% url 'DRAppoint:Contactus' %}"
                                         class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 sm:px-2 py-2.5 text-center inline-flex items-center">Contact
                                         Us
                                     </a>
@@ -363,7 +359,7 @@
 
 
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    <a href="{% url 'DRAppoint:Home' %}" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
                         aria-current="page">
 
 
@@ -373,7 +369,7 @@
 
                     <!-- 4 -->
                     <div class="relative">
-                        <a href="#" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
+                        <a href="{% url 'DRAppoint:About' %}" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
                             class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
 
                     </div>
@@ -390,34 +386,31 @@
                                 aria-labelledby="dropdownDividerButton5">
 
                                 <li>
-                                    <a href="#"
+                                    <a href="{% url 'MediJeevan:About' %}"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">MediJeevan</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="{% url 'DR_BLOG:About' %}"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_BLOG</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="{% url 'DR_Feature:About' %}"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DR_Feature</a>
                                 </li>
 
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">DRAppoint</a>
-                                </li>
+                              
                             </ul>
                             <div class="py-2">
                                 <h4 class="text-blue-200 text-left pl-1 my-1">Quick link</h4>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
-                                </a>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
-                                </a>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
-                                </a>
+                                <a href="{% url 'MediJeevan:Home' %}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MediJeevan.com
+                            </a>
+                            <a href="{% url 'DR_Feature:Home' %}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_Feature.com
+                            </a>
+                            <a href="{% url 'DR_BLOG:Home' %}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DR_BLOG.com
+                            </a>
 
 
                             </div>
@@ -471,13 +464,13 @@
 
 
                     <div class="relative">
-                        <a href="#"
+                        <a href="{% url 'DRAppoint:Whats_new' %}"
                             class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">What's
                             new</a>
                     </div>
 
                     <div class="relative">
-                        <a href="#"
+                        <a href="{% url 'DRAppoint:Contactus' %}"
                             class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact
                             Us
                         </a>

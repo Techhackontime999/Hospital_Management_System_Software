@@ -28,6 +28,9 @@ urlpatterns = [
     path('SignUp/', views.SignUp,name='SignUp'),
     path('About/', views.About,name='About'),
     path('ForgotPassword/', views.ForgotPassword,name='ForgotPassword'),
+    path('Whats_new/', views.Whats_new,name='Whats_new'),
+    path('Contactus/', views.Contactus,name='Contactus'),
+    path('Make_Payment/', views.Make_Payment,name='Make_Payment'),
 
 
 

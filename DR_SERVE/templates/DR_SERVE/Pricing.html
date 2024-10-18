@@ -1,22 +1,99 @@
 {% load static tailwind_tags %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Service Price Calculator</title>
   {% tailwind_css %}
-  <style>
-    html,
-    body {
-      overflow-x: hidden;
-    }
-  </style>
-</head>
-<body>
 
-{% load static %}
-            
+  </head>
+  <body class="bg-gray-100 p-5">
+  
+    <!-- Container for the services and total price -->
+    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow-md">
+      <h1 class="text-2xl font-bold mb-4 text-gray-800">Choose Your Services</h1>
+  
+      <!-- Service 1 -->
+      <div class="flex justify-between items-center mb-4">
+        <label for="service1" class="text-lg text-gray-700">Service 1</label>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-600">$50</span>
+          <input type="checkbox" id="service1" class="service-checkbox" data-price="50">
+        </div>
+      </div>
+  
+      <!-- Service 2 -->
+      <div class="flex justify-between items-center mb-4">
+        <label for="service2" class="text-lg text-gray-700">Service 2</label>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-600">$30</span>
+          <input type="checkbox" id="service2" class="service-checkbox" data-price="30">
+        </div>
+      </div>
+  
+      <!-- Service 3 -->
+      <div class="flex justify-between items-center mb-4">
+        <label for="service3" class="text-lg text-gray-700">Service 3</label>
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-600">$20</span>
+          <input type="checkbox" id="service3" class="service-checkbox" data-price="20">
+        </div>
+      </div>
+  
+      <!-- Total Price Section -->
+      <div class="mt-6 border-t pt-4">
+        <h2 class="text-xl font-semibold text-gray-800">Total Price: $<span id="totalPrice">0</span></h2>
+      </div>
+  
+      <!-- Payment Button -->
+      <div class="mt-6">
+        <button id="paymentButton" class="w-full bg-gray-400 text-white py-2 px-4 rounded cursor-not-allowed" disabled>
+          Proceed to Payment
+        </button>
+      </div>
+    </div>
+  
+   <!-- JavaScript to handle price calculation and payment button activation -->
+  <script>
+    // Select all checkboxes and elements
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+    const totalPriceElement = document.getElementById('totalPrice');
+    const paymentButton = document.getElementById('paymentButton');
+
+    // Function to calculate total price and toggle payment button
+    function calculateTotal() {
+      let totalPrice = 0;
+
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          totalPrice += parseInt(checkbox.getAttribute('data-price'));
+        }
+      });
+
+      // Update the total price display
+      totalPriceElement.textContent = totalPrice;
+
+      // Enable or disable the payment button
+      if (totalPrice > 0) {
+        paymentButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+        paymentButton.classList.add('bg-blue-500', 'hover:bg-blue-700', 'cursor-pointer');
+        paymentButton.disabled = false;
+      } else {
+        paymentButton.classList.remove('bg-blue-500', 'hover:bg-blue-700', 'cursor-pointer');
+        paymentButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+        paymentButton.disabled = true;
+      }
+    }
+
+    // Add event listener to all checkboxes
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', calculateTotal);
+    });
+  </script>
+
 </body>
 </html>

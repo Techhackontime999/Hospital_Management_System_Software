@@ -25,3 +25,12 @@ def ForgotPassword(request):
     return render(request,'DRAppoint/Forgot_Password.html')    
 
 
+def Whats_new(request):
+    # return HttpResponse("hello hospital home")
+    return render(request,"DRAppoint/What's_new.html")  
+def Contactus(request):
+    # return HttpResponse("hello hospital home")
+    return render(request,'DRAppoint/Contactus.html')  
+def Make_Payment(request):
+    # return HttpResponse("hello hospital home")
+    return render(request,'DRAppoint/Make_Payment.html')  

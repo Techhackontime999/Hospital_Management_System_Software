@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'django_browser_reload',
+    'DR_SERVE',
     
 
 ]
@@ -143,6 +144,11 @@ STATICFILES_DIRS = [
     BASE_DIR ,"static",
 
 ]
+
+
+
+
+
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'

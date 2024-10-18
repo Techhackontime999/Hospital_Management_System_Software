@@ -23,6 +23,20 @@ urlpatterns = [
     path('Management/', views.Management,name='Management'),
 
     path('About/', views.About,name='About'),
+    path('Signin/', views.Signin,name='Signin'),
+    path('Pricing/', views.Pricing,name='Pricing'),
+    path('Make_Payment/', views.Make_Payment,name='Make_Payment'),
+    path('Register/', views.Register,name='Register'),
+    path('Forgot_Password/', views.Forgot_Password,name='Forgot_Password'),
+    path('Whats_new/', views.Whats_new,name='Whats_new'),
+
+    path('Contactus/', views.Contactus,name='Contactus'),
+
+
+
+
+
+
 
 
 
