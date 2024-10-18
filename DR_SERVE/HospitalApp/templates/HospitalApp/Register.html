@@ -18,45 +18,57 @@
 
 
         <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-300 from-sky-300">Better Data</span> Scalable AI.</h1>
-        <p class="text-lg font-normal text-gray-200 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-sky-300 mb-2">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         
 
+<!-- Search bar start -->
+<form class="text-xs mx-auto mt-3 w-full my-4">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+        <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for services by name, price or free" required />
+        <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+    </div>
+</form>
+<!-- Search bar close -->
 
-        <div class="relative mt-1 flex flex-col rounded-xl border-3 border-gray-200  text-opacity-55 shadow">
-            <nav class="flex min-w-[100px] flex-col gap-1 p-2">
-                <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
-                    <label for="check-vertical-list-group-1" class="flex w-full cursor-pointer items-center px-3 py-2">
-                        <div class="inline-flex items-center">
-                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-1">
-                                <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-1" />
-                                <span
-                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
-                                        fill="currentColor" stroke="currentColor" stroke-width="1">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </span>
-                            </label>
-                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
-                                React
-                            </label>
-                        </div>
-                    </label>
-                </div>
+
+        <div id="checkboxes-container"  class="relative bg-gradient-to-r from-indigo-400 from-10% overflow-auto no-scrollbar via-sky-400 via-30%  to-90% shadow shadow-black mt-1 flex flex-col rounded-xl border-3 border-gray-200  text-opacity-55 ">
+            <h1 class="text-2xl font-bold mb-4 mx-auto mt-4 text-green-200">Choose Your Services</h1>
+            <nav class="flex min-w-[100px] flex-col gap-1 p-2 ">
+               <!-- Checkboxes List -->
+    <div role="button" class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+        <label for="check-vertical-list-group-1" class="flex w-full cursor-pointer items-center px-3 py-2">
+            <div class="inline-flex items-center">
+                <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-1">
+                    <input type="checkbox"data-price="@Free" data-name="Telemedicine Services" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-vertical-list-group-1" />
+                    <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </label>
+                <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group-1">
+                    Telemedicine Services
+                </label>
+            </div>
+        </label>
+        <span class="text-blue-900 mr-4">@Free</span>
+    </div>
+    <!-- Add more checkbox items with similar structure -->
 <!-- 2 -->
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-2" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-2">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-2" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-2" data-name="React"data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -72,16 +84,18 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-3" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -97,16 +111,18 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-4" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-4">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-4" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-4" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -122,18 +138,20 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-5" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-5">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-5" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-5" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -149,6 +167,8 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
@@ -157,13 +177,13 @@
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-6" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-6">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-6" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-6" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -179,19 +199,21 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-7" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-7">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-7" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-7" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -207,18 +229,20 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-8" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-8">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-8" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-8" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -234,18 +258,20 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-9" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-9">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-9" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-9" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -261,18 +287,20 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-10" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-10">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-10" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-10" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -288,18 +316,20 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
 
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-11" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-11">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-11" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-11" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -315,6 +345,8 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$40</span>
+
                 </div>
 
 
@@ -332,13 +364,13 @@
 
 
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-12" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-12">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-12" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-12" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -354,15 +386,17 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
                 </div>
                 <div role="button"
-                    class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
                     <label for="check-vertical-list-group-13" class="flex w-full cursor-pointer items-center px-3 py-2">
                         <div class="inline-flex items-center">
                             <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-13">
                                 <input type="checkbox"
-                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
-                                    id="check-vertical-list-group-13" />
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-13" data-price="50"/>
                                 <span
                                     class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
@@ -378,10 +412,105 @@
                             </label>
                         </div>
                     </label>
+                    <span class="text-blue-900 mr-4">$10</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-price="50"/>
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                React
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-price="50"/>
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                React
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3"data-name="amit" data-price="550"/>
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                        amit
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$550</span>
+
                 </div>
             </nav>
+
+
         </div>
+              <!-- Payment Button -->
+  
+              <div class="mt-6 border-t pt-4">
+                <h2 class="text-xl font-semibold text-gray-800">Total Price: $<span id="totalPrice">0</span></h2>
+              </div>
+       
     </div>
+    <!-- Total Price Section -->
+ 
 <!-- service selection close -->
 
     <!-- register start -->
@@ -389,6 +518,8 @@
         <div class="flex flex-col justify-center font-[sans-serif] sm:h-screen p-4">
             <div class="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-8">
                 <div class="text-center mb-12">
+        Register and pay
+
                     <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo"
                             class='w-40 inline-block' />
                     </a>
@@ -425,11 +556,11 @@
                         </div>
                     </div>
 
-                    <div class="!mt-12">
-                        <button type="button"
-                            class="w-full py-3 px-4 text-sm tracking-wider font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
-                            Create an account
-                        </button>
+                    <div class="mt-12">
+                      
+                        <button id="paymentButton" class="w-full py-3 bg-gray-600 text-white focus:outline-none px-4 rounded cursor-not-allowed" disabled>
+                         Register &  Proceed to Payment
+                          </button>
                     </div>
                     <p class="text-gray-800 text-sm mt-6 text-center">Already have an account? <a
                             href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">Login
@@ -439,7 +570,67 @@
         </div>
     </div>
     <!-- register close -->
+     <!-- js for payment calculate start -->
+      <!-- JavaScript to handle price calculation and payment button activation -->
+  <script>
+    // Select all checkboxes and elements
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+    const totalPriceElement = document.getElementById('totalPrice');
+    const paymentButton = document.getElementById('paymentButton');
 
+    // Function to calculate total price and toggle payment button
+    function calculateTotal() {
+      let totalPrice = 0;
+
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          totalPrice += parseInt(checkbox.getAttribute('data-price'));
+        }
+      });
+
+      // Update the total price display
+      totalPriceElement.textContent = totalPrice;
+
+      // Enable or disable the payment button
+      if (totalPrice > 0) {
+        paymentButton.classList.remove('bg-gray-600', 'cursor-not-allowed');
+        paymentButton.classList.add('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+        paymentButton.disabled = false;
+      } else {
+        paymentButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+        paymentButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+        paymentButton.disabled = true;
+      }
+    }
+
+    // Add event listener to all checkboxes
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', calculateTotal);
+    });
+  </script>
+
+     <!-- js for payment calculate close-->
+<!-- script for filter services start -->
+<script>
+    document.getElementById('default-search').addEventListener('input', function() {
+        const searchValue = this.value.toLowerCase();  // Get the search input value
+        const checkboxes = document.querySelectorAll('#checkboxes-container .checkbox-item');  // Get all checkbox items
+    
+        checkboxes.forEach(function(checkbox) {
+            const name = checkbox.getAttribute('data-name').toLowerCase();  // Get service name
+            const price = checkbox.getAttribute('data-price').toLowerCase();  // Get service price
+    
+            // Check if the input matches the service name, price, or free
+            if (name.includes(searchValue) || price.includes(searchValue) || (searchValue.includes('free') && price === '@free')) {
+                checkbox.style.display = 'flex';  // Show matching services
+            } else {
+                checkbox.style.display = 'hidden';  // Hide non-matching services
+            }
+        });
+    });
+    </script>
+<!-- script for filter services close -->
+    
 </body>
 
 </html>
