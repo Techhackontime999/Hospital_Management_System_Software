@@ -1,12 +1,783 @@
+{% load static tailwind_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DRAppoint [SignUp]</title>
+    {% tailwind_css %}
 </head>
-<body>
-    SignUp
-    
+
+<body class="grid sm:grid-cols-2 gap-10  sm:mx-14 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <!-- service selection start -->
+    <!-- 1 -->
+
+    <div
+        class="grid-cols-1  h-[820px] flex flex-col justify-center mx-10 mt-10 font-[sans-serif] sm:h-screen p-4  overflow-auto">
+
+
+        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span
+                class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-300 from-sky-300">Better Data</span>
+            Scalable AI.</h1>
+        <p class="text-lg font-normal text-gray-400 lg:text-xl dark:text-sky-300 mb-2">Here at Flowbite we focus on
+            markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+
+
+        <!-- Search bar start -->
+        <form class="text-xs mx-auto mt-3 w-full my-4">
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Services for customizing your Dashboard.." required />
+                <button type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+        </form>
+        <!-- Search bar close -->
+
+
+        <div id="checkboxes-container"
+            class="relative bg-gradient-to-r from-indigo-400 from-10% overflow-auto no-scrollbar via-sky-400 via-30%  to-90% shadow shadow-black mt-1 flex flex-col rounded-xl border-3 border-gray-200  text-opacity-55 ">
+            <h1 class="text-2xl font-bold mb-4 mx-auto mt-4 text-green-200">Customize Your Dashboard</h1>
+            <nav class="flex min-w-[100px] flex-col gap-1 p-2 ">
+                <!-- Checkboxes List -->
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-1" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-1">
+                                <input type="checkbox" data-price="@Free" data-name=" Health Analysis"
+                                    class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-1" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group-1">
+                              Health Analysis
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">@Free</span>
+                </div>
+                <!-- Add more checkbox items with similar structure -->
+                <!-- 2 -->
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-2" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-2">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-2" data-name=" See Quiue" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                See Quiue
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name="  See Past Report" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                               See Past Report
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-4" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-4">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-4" dataname="    Online Consultation" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Online Consultation
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-5" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-5">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-5" dataname="  Find Your Best Hospital"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                               Find Your Best Hospital
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-6" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-6">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-6" data-name=" See Patient Rating" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                See Patient Rating
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-7" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-7">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-7" data-name=" Dental Services Management"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Dental Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-8" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-8">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-8"
+                                    data-name="  Materniti and Childcare Services Management" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Materniti and Childcare Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-9" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-9">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-9" data-name=" Critical Care Services Management"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Critical Care Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-10" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-10">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-10"
+                                    data-name="  Preventive and Wellness Services Management" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Preventive and Wellness Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-11" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-11">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-11" data-name=" Ambulance Services Management"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Ambulance Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$40</span>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-12" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-12">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-12"
+                                    data-name=" Blood Bank and Transfusion Services Management" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group2">
+                                Blood Bank and Transfusion Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-13" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-13">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-13"
+                                    data-name=" Radiology and Imaging Services Management" data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group3">
+                                Radiology and Imaging Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$10</span>
+
+                </div>
+
+
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name="Organ Transplation Services Management"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Organ Transplation Services Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name="Room and Bed Management"
+                                    data-price="50" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Room and Bed Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$50</span>
+
+                </div>
+
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name=" Doctor Management" data-price="550" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Doctor Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$550</span>
+
+                </div>
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name="   Staff Management" data-price="550" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Staff Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$550</span>
+
+                </div>
+                <div role="button"
+                    class="checkbox-item flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100">
+                    <label for="check-vertical-list-group-3" class="flex w-full cursor-pointer items-center px-3 py-2">
+                        <div class="inline-flex items-center">
+                            <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group-3">
+                                <input type="checkbox"
+                                    class="service-checkbox peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                                    id="check-vertical-list-group-3" data-name="   Inventory Management"
+                                    data-price="550" />
+                                <span
+                                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20"
+                                        fill="currentColor" stroke="currentColor" stroke-width="1">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </label>
+                            <label class="cursor-pointer ml-2 text-slate-700 text-sm" for="check-vertical-list-group">
+                                Inventory Management
+                            </label>
+                        </div>
+                    </label>
+                    <span class="text-blue-900 mr-4">$5</span>
+
+                </div>
+            </nav>
+
+
+        </div>
+        <!-- Payment Button -->
+
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold text-gray-800">Total Price: $<span id="totalPrice">0</span></h2>
+        </div>
+
+    </div>
+    <!-- Total Price Section -->
+
+    <!-- service selection close -->
+
+    <!-- register start -->
+    <div class="grid-cols-1">
+        <div class="flex flex-col justify-center font-[sans-serif] sm:h-screen p-4">
+            <div class="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-8">
+                <div class="text-center mb-12">
+                   
+
+                    <a href="javascript:void(0)"> <img src="{% static 'DRAppoint/images/DR_Appoint_logo.jpg' %}" alt="logo"
+                        class='w-28 rounded-md shadow-lg shadow-black inline-block' />
+                    </a>
+                </div>
+
+                <form>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="text-gray-800 text-sm mb-2 block">Email Id</label>
+                            <input name="email" type="text"
+                                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                                placeholder="Enter email" />
+                        </div>
+                        <div>
+                            <label class="text-gray-800 text-sm mb-2 block">Password</label>
+                            <input name="password" type="password"
+                                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                                placeholder="Enter password" />
+                        </div>
+                        <div>
+                            <label class="text-gray-800 text-sm mb-2 block">Confirm Password</label>
+                            <input name="cpassword" type="password"
+                                class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
+                                placeholder="Enter confirm password" />
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me" type="checkbox"
+                                class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+                                <label for="remember-me" class="text-gray-800 ml-3 block text-sm">
+                                    I accept the <a href="javascript:void(0);"data-modal-target="default-modal" data-modal-toggle="default-modal"
+                                        class="text-blue-600 font-semibold hover:underline ml-1">Terms and Conditions</a>
+                                </label>
+           <!-- Main modal -->
+        <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full bg-black bg-opacity-50">
+            <div class="relative p-4 w-[100%] h-full sm:w-[50%] mx-auto">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-800 h-full">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Terms of Service
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4 h-full overflow-y-auto">
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                        </p>
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+
+                        <button id="paymentButton"
+                            class="w-full py-3 bg-gray-600 text-white focus:outline-none px-4 rounded cursor-not-allowed"
+                            disabled>
+                            SignUp and Pay
+                        </button>
+                    </div>
+                    <p class="text-gray-800 text-sm mt-6 text-center">Already have an account? <a
+                            href="{% url 'DRAppoint:SignIn' %}" class="text-blue-600 font-semibold hover:underline ml-1">Login
+                            here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- register close -->
+    <!-- js for payment calculate start -->
+    <!-- JavaScript to handle price calculation and payment button activation -->
+    <script>
+        // Select all checkboxes and elements
+        const checkboxes = document.querySelectorAll('.service-checkbox');
+        const totalPriceElement = document.getElementById('totalPrice');
+        const paymentButton = document.getElementById('paymentButton');
+
+        // Function to calculate total price and toggle payment button
+        function calculateTotal() {
+            let totalPrice = 0;
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    totalPrice += parseInt(checkbox.getAttribute('data-price'));
+                }
+            });
+
+            // Update the total price display
+            totalPriceElement.textContent = totalPrice;
+
+            // Enable or disable the payment button
+            if (totalPrice > 0) {
+                paymentButton.classList.remove('bg-gray-600', 'cursor-not-allowed');
+                paymentButton.classList.add('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+                paymentButton.disabled = false;
+            } else {
+                paymentButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'cursor-pointer');
+                paymentButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                paymentButton.disabled = true;
+            }
+        }
+
+        // Add event listener to all checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', calculateTotal);
+        });
+    </script>
+
+    <!-- js for payment calculate close-->
+    <!-- script for filter services start -->
+    <script>
+        document.getElementById('default-search').addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();  // Get the search input value
+            const checkboxes = document.querySelectorAll('#checkboxes-container .checkbox-item');  // Get all checkbox items
+
+            checkboxes.forEach(function (checkbox) {
+                const inputElement = checkbox.querySelector('input');  // Get the input element inside the checkbox-item
+                const name = inputElement.getAttribute('data-name').toLowerCase();  // Get service name from input
+                const price = inputElement.getAttribute('data-price').toLowerCase();  // Get service price from input
+
+                // Check if the input matches the service name, price, or free
+                if (name.includes(searchValue) || price.includes(searchValue) || (searchValue.includes('free') && price === '@free')) {
+                    checkbox.style.display = 'flex';  // Show matching services
+                } else {
+                    checkbox.style.display = 'none';  // Hide non-matching services
+                }
+            });
+        });
+
+    </script>
+    <!-- script for filter services close -->
+<!-- js for opening modal start-->
+<script>
+    // Function to show the modal
+    function showModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden'); // Remove 'hidden' class to show the modal
+    }
+
+    // Function to hide the modal
+    function hideModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.add('hidden'); // Add 'hidden' class to hide the modal
+    }
+
+    // Event listener for opening the modal
+    document.querySelector('[data-modal-toggle="default-modal"]').addEventListener('click', function() {
+        showModal('default-modal');
+    });
+
+    // Event listener for closing the modal
+    document.querySelector('[data-modal-hide="default-modal"]').addEventListener('click', function() {
+        hideModal('default-modal');
+    });
+
+    // Optional: Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('default-modal');
+        if (event.target === modal) {
+            hideModal('default-modal');
+        }
+    });
+</script>
+<!-- js for opening modal close-->
 </body>
+
 </html>
