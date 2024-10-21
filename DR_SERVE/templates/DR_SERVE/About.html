@@ -109,13 +109,13 @@
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="{% url 'Home' %}" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                <a href="{% url 'Home' %}" class="rounded-md hover:bg-gray-700  px-3 py-2 text-sm font-medium text-white"
                   aria-current="page">Dashboard</a>
 
                 <!-- 1 -->
                 <div class="relative">
                   <a href="{% url 'About' %}" id="dropdownDividerButton1" data-dropdown-toggle="dropdownDivider1"
-                    class=" text-gray-300 hover:bg-gray-700 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">About</a>
+                    class=" text-gray-300 hover:bg-gray-700 bg-gray-900 hover:text-white    focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm sm:px-2 px-4 py-2.5 text-center inline-flex items-center">About</a>
 
                 </div>
 
@@ -279,14 +279,14 @@
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="{% url 'Home' %}" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+          <a href="{% url 'Home' %}" class="block rounded-md hover:bg-gray-700 px-3 py-2 text-base font-medium text-white"
             aria-current="page">Dashboard</a>
 
 
           <!-- 4 -->
           <div class="relative">
             <a href="{% url 'About' %}" id="dropdownDividerButton4" data-dropdown-toggle="dropdownDivider4"
-              class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+              class="block rounded-md px-3 py-2 text-sm font-medium  bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
 
           </div>
 

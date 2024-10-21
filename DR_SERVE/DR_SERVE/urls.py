@@ -39,12 +39,16 @@ urlpatterns = [
 
 
     # include app here
-     path("HospitalApp/", include("HospitalApp.urls",namespace="HospitalApp")),
+     path("HospitalApp/",  include(('HospitalApp.urls', 'HospitalApp'), namespace='HospitalApp')),
      path("MediJeevan/", include("MediJeevan.urls",namespace="Medijeevan")),
      path("DR_BLOG/", include("DR_BLOG.urls",namespace="DR_BLOG")),
      path("DR_Feature/", include("DR_Feature.urls",namespace="DR_Feature")),
      path("DRAppoint/", include("DRAppoint.urls",namespace="DRAppoint")),
 
+
+# urlpatterns = [
+#     path('HospitalApp/', include(('HospitalApp.urls', 'HospitalApp'), namespace='HospitalApp')),
+# ]
 
 
 

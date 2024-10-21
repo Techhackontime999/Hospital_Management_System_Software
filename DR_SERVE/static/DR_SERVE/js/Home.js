@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('[data-carousel-next]');
 
     let currentIndex = 0;
-    const autoScrollInterval = 3000; // Change slide every 3 seconds
+    const autoScrollInterval = 7000; // Change slide every 3 seconds
     let autoScroll;
 
     const showSlide = (index) => {
@@ -272,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // rating js start
 // Repeat for other ratings
-
 
     // Example JavaScript to dynamically update the rating bars and percentages
     function updateRating(ratingType, percentage) {
