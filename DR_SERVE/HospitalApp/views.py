@@ -21,6 +21,67 @@ def About(request):
     return render(request,'HospitalApp/About.html')
 # @csrf_protect
 def Make_Payment(request):
+
+    return render(request, 'HospitalApp/make-payment.html')
+
+   
+        
+    
+
+
+
+# Assuming you have a Service model to store service details
+
+
+def Register(request):
+   return render(request,'HospitalApp/Register.html')
+ 
+    
+   
+
+
+
+def Signin(request):
+    return render(request,'HospitalApp/Signin.html')
+
+def Forgot_Password(request):
+    return render(request,'HospitalApp/Forgot_Password.html')
+def Whats_new(request):
+    return render(request,"HospitalApp/What's_new.html")
+def Contactus(request):
+    return render(request,'HospitalApp/Contactus.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #     if request.method == 'POST':
 #         # Get form data
 #         email = request.POST.get('email')
@@ -57,31 +118,3 @@ def Make_Payment(request):
 #      # GET request, render the register template
 #     services = Service.objects.all()  # Fetch available services for checkboxes
     # return render(request, 'HospitalApp/make-payment.html', {'services': services})
-    return render(request, 'HospitalApp/make-payment.html')
-
-   
-        
-    
-
-
-
-# Assuming you have a Service model to store service details
-
-
-def Register(request):
-   return render(request,'HospitalApp/Register.html')
- 
-    
-   
-
-
-
-def Signin(request):
-    return render(request,'HospitalApp/Signin.html')
-
-def Forgot_Password(request):
-    return render(request,'HospitalApp/Forgot_Password.html')
-def Whats_new(request):
-    return render(request,"HospitalApp/What's_new.html")
-def Contactus(request):
-    return render(request,'HospitalApp/Contactus.html')

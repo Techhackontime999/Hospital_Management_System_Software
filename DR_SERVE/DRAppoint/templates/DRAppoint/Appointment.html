@@ -182,20 +182,7 @@
                         <span class="ms-3">Get Reciept</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" id="CancelAppointment-tab" data-tabs-target="#CancelAppointment_content" role="tab6"
-                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ms-3">Cancel Appointment</span>
-                    </a>
-                </li>
+                
 
                 <li>
 
@@ -238,6 +225,20 @@
                                 d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                         </svg>
                         <span class="ms-3">Health Analysis</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="CancelAppointment-tab" data-tabs-target="#CancelAppointment_content" role="tab6"
+                        class="flex items-center p-2 text-gray-900 pointer-events-none opacity-50 transition-all rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 21">
+                            <path
+                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ms-3">Cancel Appointment</span>
                     </a>
                 </li>
                 <li>
@@ -766,7 +767,7 @@
                             next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                     </div>
                     <!-- tab 2 -->
-                    <div class="hidden p-4 py-14 rounded-lg " id="settings" role="tabpanel"
+                    <div class="hidden p-4 py-14 rounded-lg h-screen " id="settings" role="tabpanel"
                         aria-labelledby="settings-tab">
 
 
@@ -775,7 +776,7 @@
                         <!-- search start -->
                         <h2 class="text-4xl font-extrabold dark:text-white">Choose your hospital</h2>
 
-                        <form class="my-8 max-w-full mx-auto">
+                        <form class="my-8 max-w-full  mx-auto">
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-4">
                                 <!-- First Select -->
                                 <div>
@@ -954,11 +955,11 @@
 
     <!-- Appointment main close -->
     <!-- payment main start -->
-    <div class="p-4 sm:ml-64 hidden bg-black" id="Payment_content">
+    <div class=" sm:ml-64 hidden bg-black" id="Payment_content">
         <div class="p-4  rounded-lg  mt-14">
             <section class="bg-white py-8 antialiased h-screen  mt-0  dark:bg-gray-900 md:py-16">
                 <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
-                  <div class="mx-auto max-w-fit mt-4">
+                  <div class="mx-auto max-w-fit sm:w-[700px] mt-4">
                     <h2 class="text-xl  font-semibold text-gray-900 dark:text-white sm:text-2xl">Payment</h2>
               
                     <div class="mt-6 sm:mt-8 ">
@@ -1204,7 +1205,7 @@
     <!-- Reciept main close -->
     <!-- Quieue main start -->
    <div class="p-4 sm:ml-64 hidden" id="Quieue_content">
-    <div class="p-4 bg-gradient-to-b from-blue-400 to-green-400 rounded-lg mt-14  h-screen">
+    <div class="p-4 bg-gradient-to-b  rounded-lg mt-14  h-screen">
         <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
             <h2 class="text-xl font-bold text-center mb-6">Your Current Queue Position</h2>
 
@@ -1245,7 +1246,7 @@
         </div>
 
         <!-- Bottom Navigation for Queue Actions -->
-        <div class="relative bottom-0 left-0 right-0 p-4 bg-cyan-400 shadow-md">
+        <div class="mt-10 p-4 bg-cyan-400 shadow-md">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
                 <button id="cancel-appointment"
                     class="w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-4 rounded shadow">
